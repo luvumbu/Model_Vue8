@@ -398,6 +398,12 @@ ok.push(); // envoie l'information au code pkp
 <style>
  .div_1{
     margin-bottom:100px; 
+ 
+ }
+ .div_1 input {
+    padding : 15px ; 
+    margin-bottom : 45px; 
+ 
  }
 </style>
 <?php 

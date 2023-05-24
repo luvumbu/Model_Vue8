@@ -4,16 +4,8 @@ let random_1 = Math.random()*250 ;
 
 let colors_1_ =[] ; 
 let distriution = [] ; 
-let provisoir = "w";
 
-let debut = false ; 
 
-const add_element_array = [];
-const add_element_array_colors = [];
-
-  let couleur_final  = 0
-
- 
 var oook = 0 ; 
 for(var x = 0 ; x < 500; x ++){
  
@@ -30,9 +22,7 @@ colors_1_.push(colors_1);
 
 function add_liste_projet_exe(_this){
 
-
  
-
    
   var ok = new Information("class/php/php_add/add_liste_projet.php"); // création de la classe 
   ok.add("login", "root"); // ajout de l'information pour lenvoi 
@@ -67,8 +57,6 @@ function exe_element() {
 
  var para = document.createElement("div"); 
  para.setAttribute("id","id_div_global_style1_"+this.responseText) ; 
- 
-
  para.setAttribute("class","div_1") ; 
 
 
@@ -79,16 +67,11 @@ function exe_element() {
 
  if(general_element==""){
  
-
-
-  general_element = this.responseText ; 
   document.getElementById("id_div_global_style1").appendChild(para);
 
 
 
   
-
-
   
 
 
@@ -105,8 +88,7 @@ function exe_element() {
 
   document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
   var  para = document.createElement("div");
-
-  
+  para.innerHTML= parseInt(Math.random()*500) ; 
   para.setAttribute("id","colors_"+this.responseText) ;   
   para.setAttribute("title", parseInt(Math.random()*500)) ; 
    // para.innerHTML=vmax_ok ;  
@@ -123,31 +105,6 @@ function exe_element() {
  }
  else {
  
- 
-   if(add_element_array.includes(_this.title)==false) {
-    console.log("++") ; 
-
-          add_element_array.push(_this.title);
-          add_element_array_colors.push(parseInt(Math.random()*500));
-
-
-          console.log("avant") ; 
-    console.log(add_element_array) ; 
-          console.log("apres") ; 
-
-   }
-   else {
-    console.log(add_element_array) ; 
-    console.log(add_element_array.indexOf(_this.title)) ; 
- 
-
-   }
-
-console.log("FIN")  ; 
-     couleur_final = parseInt(add_element_array.indexOf(_this.title))
-    console.log(add_element_array_colors[couleur_final]) ;
-
-
 
   let vmax_ok = document.getElementById("vplus"+general_element).title ; 
   
@@ -168,9 +125,6 @@ console.log("FIN")  ;
   
  
 
-
- 
-
  
 
  
@@ -187,12 +141,7 @@ console.log("FIN")  ;
  para.placeholder="Mon text est ok" ;
  
  para.className="input_color";
-
-
- 
- para.setAttribute("style",colors_1_[couleur_final]+" ; margin-top:100px") ;
-
- 
+ para.setAttribute("style",colors_1_[0]+" ; margin-top:100px") ;
  para.title=this.responseText; 
 
  oook ++ ; 
@@ -301,16 +250,6 @@ console.log("FIN")  ;
 
  var  para = document.createElement("div");
  para.setAttribute("id","parent_"+this.responseText) ; 
- document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
-
-
-
-
-
- var  para = document.createElement("div");
- para.setAttribute("id","colors_"+provisoir) ; 
- para.setAttribute("title",provisoir) ; 
- 
 
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
 
@@ -329,7 +268,9 @@ console.log("FIN")  ;
     
     
      
- 
+    scrollTo_ = scrollTo_ + 700 ;
+    general_element =this.responseText;
+  
   
   
   
