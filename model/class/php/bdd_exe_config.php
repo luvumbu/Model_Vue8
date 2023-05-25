@@ -65,6 +65,8 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_projet (
 
   liste_projet_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
   liste_projet_id_sha1 VARCHAR(200) NOT NULL,
+  liste_projet_id_parent VARCHAR(200) NOT NULL,
+
   liste_projet_id_sha1_general VARCHAR(200) NOT NULL,
   
 
@@ -86,35 +88,7 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_projet (
 
 
 
-// ajout visite commentaire plus like 
-$execution_formulaire_php->set_action ("CREATE TABLE liste_projet_child (
-  liste_projet_child_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  liste_projet_child_id_general VARCHAR(200) NOT NULL,
-
-  
-  
-
-  liste_projet_child_sha1 VARCHAR(200) NOT NULL,
-  liste_projet_child_ip VARCHAR(200) NOT NULL,
-  liste_projet_liste_img VARCHAR(200) NOT NULL,
-
-
-  
-
-  liste_projet_child_name VARCHAR(200) NOT NULL, 
-  liste_projet_child_description1 TEXT(200) NOT NULL,
-  liste_projet_child_description2 TEXT(200) NOT NULL,
-  liste_projet_child_visibilite1 TEXT(200) NOT NULL,
-  liste_projet_child_visibilite2 TEXT(200) NOT NULL,
-
-  liste_projet_child_information_user_id_sha1 VARCHAR(200) NOT NULL, 
-  liste_projet_child_liste_projet_id_sha1 VARCHAR(200) NOT NULL, 
  
-  liste_projet_child_new_file   VARCHAR(200) NOT NULL, 
-  liste_projet_child_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-  )");
-
-
 
 
  

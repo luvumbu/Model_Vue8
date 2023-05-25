@@ -68,8 +68,7 @@ function exe_element() {
     
  
   
-    console.log("INCLUDES") ; 
-    console.log("INCLUDES") ; 
+  
 
 
  
@@ -95,26 +94,18 @@ function exe_element() {
 
   general_element = this.responseText ; 
   document.getElementById("id_div_global_style1").appendChild(para);
+/*
+Premier element creer sans parent 
+general_element definis le nom du parent mais comme il est premier il na pas de parent atribué
 
 
-
-  
-
-
-  
-
-
+*/
 
   var  para = document.createElement("div");
   para.setAttribute("id","vplus"+this.responseText) ;   
   para.setAttribute("title",1) ; 
   vmax_ok = 1 ; 
   document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
-
-
-
-
-
   document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
   var  para = document.createElement("div");
 
@@ -125,61 +116,31 @@ function exe_element() {
   document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
  
 
-
-
- 
-
-
-
-
  }
- else {
- 
+ else { 
  
   add_element_array_parent.push(this.responseText) ; 
    if(add_element_array.includes(_this.title)==false) {
            add_element_array.push(_this.title);
           add_element_array_colors.push(parseInt(Math.random()*500));
- 
-
    }
- 
- 
- 
-     couleur_final = parseInt(add_element_array.indexOf(_this.title))
- 
-
- 
-
-  let vmax_ok = document.getElementById("vplus"+general_element).title ; 
-  
- 
-  vmax_ok ++ ; 
-
-
- 
-  
+ couleur_final = parseInt(add_element_array.indexOf(_this.title))
+ let vmax_ok = document.getElementById("vplus"+general_element).title ; 
+ vmax_ok ++ ; 
   document.getElementById("parent_"+_this.title).appendChild(para);
   var  para = document.createElement("div");
   para.setAttribute("id","vplus"+this.responseText) ;   
   para.setAttribute("title",vmax_ok) ; 
    // para.innerHTML=vmax_ok ;  
- 
    //add_element_array_parent.push("id_div_global_style1_"+this.responseText) ;
   document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
 
  }
  
  var  para = document.createElement("input");
- para.placeholder="Mon text est ok" ;
- 
+ para.placeholder="Entrer votre texte" ;
  para.className="input_color";
-
-
- 
  para.setAttribute("style",colors_1_[couleur_final]+" ; margin-top:100px") ;
-
- 
  para.title=this.responseText; 
 
  oook ++ ; 
@@ -191,7 +152,7 @@ function exe_element() {
 
 
  var  para = document.createElement("textarea");
- para.placeholder="Mon text est ok" ;
+ para.placeholder="Entrer votre texte" ;
  
  para.className="input_color";
  para.title=this.responseText; 
@@ -275,13 +236,7 @@ function exe_element() {
  var  para = document.createElement("div");
  para.setAttribute("id","colors_"+provisoir) ; 
  para.setAttribute("title",provisoir) ; 
- 
-
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
-
-
-
- 
  if(_this==undefined){
 array_1.push(undefined) ; 
 array_2.push(undefined) ; 
@@ -290,22 +245,8 @@ array_2.push(undefined) ;
   array_1.push(_this.title) ; 
   array_2.push(this.responseText) ; 
  }
-
-
-
  
-  console.log(array_1) ;
-
- 
- console.log(array_2) ; 
-
-
-
-
-console.log("LOG") ;
-
-
- var ok = new Information("class/php/php_update/update_parent.php"); // création de la classe 
+ var ok = new Information("class/php/php_update/update_parent_name.php"); // création de la classe 
  ok.add("child",this.responseText); // ajout de l'information pour lenvoi 
 
  if(_this!=undefined)
@@ -319,19 +260,7 @@ console.log("LOG") ;
   
  console.log(ok.info()); // demande l'information dans le tableau
  ok.push(); // envoie l'information au code pkp 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
   }
   xhttp.open("GET", "class/php/cookie_table/liste_projet_cookie.php");
   xhttp.send();
