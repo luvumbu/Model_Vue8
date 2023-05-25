@@ -299,6 +299,39 @@ array_2.push(undefined) ;
  
  console.log(array_2) ; 
 
+
+
+
+console.log("LOG") ;
+
+
+ var ok = new Information("class/php/php_update/update_parent.php"); // création de la classe 
+ ok.add("child",this.responseText); // ajout de l'information pour lenvoi 
+
+ if(_this!=undefined)
+ {
+   ok.add("parent", _this.title); // ajout d'une deuxieme information denvoi
+ }
+ else {
+  ok.add("parent", undefined); // ajout d'une deuxieme information denvoi
+
+ }
+  
+ console.log(ok.info()); // demande l'information dans le tableau
+ ok.push(); // envoie l'information au code pkp 
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
   xhttp.open("GET", "class/php/cookie_table/liste_projet_cookie.php");
   xhttp.send();
