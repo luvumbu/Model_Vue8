@@ -9,29 +9,40 @@ let provisoir = "w";
 let debut = false ; 
 
 const add_element_array = [];
+const add_element_array_parent = [];
+const add_element_array_parent_int = [];
 const add_element_array_colors = [];
 
+let array_1 = [] ; 
+let array_2 = [] ; 
   let couleur_final  = 0
 
  
 var oook = 0 ; 
-for(var x = 0 ; x < 500; x ++){
+for(var x = 0 ; x < 1200; x ++){
  
 // creation de couleurs automatiques
   var n_1 =Math.random()*250  ; 
   var n_2 =Math.random()*250  ; 
   var n_3 =Math.random()*250  ; 
-  var n_4 =0.1  ; 
+  var n_4 =0.4  ; 
   var  colors_1 ="background-color:rgba("+n_1+","+n_2+","+n_3+","+n_4+")" ; 
 colors_1_.push(colors_1);
 
 }
-
+n_plus = 0  ; 
 
 function add_liste_projet_exe(_this){
 
 
+  add_element_array_parent_int.push(n_plus) ; 
+
+
+
+
  
+
+  n_plus ++ ; 
 
    
   var ok = new Information("class/php/php_add/add_liste_projet.php"); // création de la classe 
@@ -68,6 +79,7 @@ function exe_element() {
  var para = document.createElement("div"); 
  para.setAttribute("id","id_div_global_style1_"+this.responseText) ; 
  
+ 
 
  para.setAttribute("class","div_1") ; 
 
@@ -78,8 +90,8 @@ function exe_element() {
 
 
  if(general_element==""){
- 
-
+  general_element="ok" ;
+  add_element_array_parent.push("vide");
 
   general_element = this.responseText ; 
   document.getElementById("id_div_global_style1").appendChild(para);
@@ -108,7 +120,7 @@ function exe_element() {
 
   
   para.setAttribute("id","colors_"+this.responseText) ;   
-  para.setAttribute("title", parseInt(Math.random()*500)) ; 
+  para.setAttribute("title", parseInt(Math.random()*1199)) ; 
    // para.innerHTML=vmax_ok ;  
   document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
  
@@ -124,30 +136,20 @@ function exe_element() {
  else {
  
  
+  add_element_array_parent.push(this.responseText) ; 
    if(add_element_array.includes(_this.title)==false) {
-    console.log("++") ; 
-
-          add_element_array.push(_this.title);
+           add_element_array.push(_this.title);
           add_element_array_colors.push(parseInt(Math.random()*500));
-
-
-          console.log("avant") ; 
-    console.log(add_element_array) ; 
-          console.log("apres") ; 
-
-   }
-   else {
-    console.log(add_element_array) ; 
-    console.log(add_element_array.indexOf(_this.title)) ; 
  
 
    }
-
-console.log("FIN")  ; 
+ 
+ 
+ 
      couleur_final = parseInt(add_element_array.indexOf(_this.title))
-    console.log(add_element_array_colors[couleur_final]) ;
+ 
 
-
+ 
 
   let vmax_ok = document.getElementById("vplus"+general_element).title ; 
   
@@ -162,27 +164,12 @@ console.log("FIN")  ;
   para.setAttribute("id","vplus"+this.responseText) ;   
   para.setAttribute("title",vmax_ok) ; 
    // para.innerHTML=vmax_ok ;  
+ 
+   //add_element_array_parent.push("id_div_global_style1_"+this.responseText) ;
   document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
-
-
-  
- 
-
-
- 
-
- 
-
- 
 
  }
  
-
-
- 
-
- 
-
  var  para = document.createElement("input");
  para.placeholder="Mon text est ok" ;
  
@@ -277,28 +264,6 @@ console.log("FIN")  ;
  para.setAttribute("class","cursor_pointer") ;   
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
 
-
- 
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
  var  para = document.createElement("div");
  para.setAttribute("id","parent_"+this.responseText) ; 
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
@@ -317,27 +282,23 @@ console.log("FIN")  ;
 
 
  
-
-
-
-
+ if(_this==undefined){
+array_1.push(undefined) ; 
+array_2.push(undefined) ; 
+ }
+ else {
+  array_1.push(_this.title) ; 
+  array_2.push(this.responseText) ; 
+ }
 
 
 
  
-      
-    
-    
-     
+  console.log(array_1) ;
+
  
-  
-  
-  
-  
-  
-  
-  
-  
+ console.log(array_2) ; 
+
   }
   xhttp.open("GET", "class/php/cookie_table/liste_projet_cookie.php");
   xhttp.send();
