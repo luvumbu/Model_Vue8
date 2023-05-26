@@ -267,6 +267,11 @@ array_2.push(undefined) ;
   
  console.log(ok.info()); // demande l'information dans le tableau
  ok.push(); // envoie l'information au code pkp 
+
+
+
+ window.scrollTo( 0,scrollTo_);
+scrollTo_ = scrollTo_ + 800 ; 
  
   }
   xhttp.open("GET", "class/php/cookie_table/liste_projet_cookie.php");

@@ -47,7 +47,7 @@ include("pages_on/001.php");
    fonction dans le fichier  
 -->
 <div class="options_style">
-    <div onclick="header_2_add_blog(this)" id="header_2_add_blogs">
+    <div onclick="header_2_add_blog(this)" id="header_2_add_blogs" class="cursor_pointer">
         
         <div  class="cursor_pointer" >
         
