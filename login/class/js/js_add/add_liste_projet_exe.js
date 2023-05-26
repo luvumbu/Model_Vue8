@@ -25,7 +25,7 @@ for(var x = 0 ; x < 1200; x ++){
   var n_1 =Math.random()*250  ; 
   var n_2 =Math.random()*250  ; 
   var n_3 =Math.random()*250  ; 
-  var n_4 =0.4  ; 
+  var n_4 =0.5  ; 
   var  colors_1 ="background-color:rgba("+n_1+","+n_2+","+n_3+","+n_4+")" ; 
 colors_1_.push(colors_1);
 

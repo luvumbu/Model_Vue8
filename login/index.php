@@ -47,6 +47,8 @@ toutes les focti
 --> 
 <script src="class/js/js_off/login_user.js"></script>  
 <script src="class/js/js_array_info/dowload_img.js"></script>  
+<script src="class/js/js_array_info/add_group.js"></script>  
+
 <link rel="stylesheet" href="src/css/index.css">
 <div id="el"></div>
 <?php 

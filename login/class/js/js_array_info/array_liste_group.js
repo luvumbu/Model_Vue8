@@ -5,10 +5,7 @@
  1: array_liste_group_group.length Nombre Total des elements dans un tableau 
  2: array_liste_group.length Nombre Total des element a cherche sa representa la liste de nom dans une table de BDD exemple id,nom ..ect
  3: condition Modulo a recherche 
- 4: tab_ajout element ajouter dans le tableau apres execution 
- 
- 
- 
+ 4: tab_ajout element ajouter dans le tableau apres execution  
   */
  
  

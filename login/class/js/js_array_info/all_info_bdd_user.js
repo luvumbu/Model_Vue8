@@ -1,8 +1,5 @@
 function array_all_info_bdd_user(array_liste_projet_info,array_liste_projet,condition) { 
-    let  tab_ajout = []; 
-    
- 
-    
+    let  tab_ajout = [];     
      array_liste_projet_info.length = array_liste_projet_info.length ; 
      for(var x = 0 ;x<array_liste_projet.length;x++){
 
