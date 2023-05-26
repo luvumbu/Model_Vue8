@@ -139,6 +139,8 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  
  var  para = document.createElement("input");
  para.placeholder="Entrer votre texte" ;
+ para.setAttribute("onkeyup","update_input(this)");
+
  para.className="input_color";
  para.setAttribute("style",colors_1_[couleur_final]+" ; margin-top:100px") ;
  para.title=this.responseText; 
@@ -272,3 +274,17 @@ array_2.push(undefined) ;
    
   }
   
+
+
+  function update_input(_this){
+
+var ok = new Information("class/php/php_update/update_input.php"); // création de la classe 
+ok.add("_this_value", _this.value); // ajout de l'information pour lenvoi 
+ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi  
+console.log(ok.info()); // demande l'information dans le tableau
+ok.push(); // envoie l'information au code pkp 
+
+
+ 
+
+  }
