@@ -114,7 +114,6 @@ include("pages_on/001.php");
 
 <link rel="stylesheet" href="pages_on/style_1.css">
 <script src="pages_on/style_1.js"></script>
-<script src="pages_on/add_child_child.js"></script>
 <script src="pages_on/plus2.js"></script>
 
 

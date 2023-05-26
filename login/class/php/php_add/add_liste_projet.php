@@ -15,7 +15,7 @@ include("link.php") ;
 
 
       $_SESSION["add_liste_projet"] = $t ; 
-
+     $information_user_info = $_SESSION["information_user_id_sha1"] ; 
  
       
       $apple = new Insertion_Bdd(
@@ -31,10 +31,10 @@ include("link.php") ;
         
        
         $apple->set_msg_valudation("inserttion ok ") ;  
-        $apple->set_sql("INSERT INTO liste_projet (liste_projet_id_sha1)
+        $apple->set_sql("INSERT INTO liste_projet (liste_projet_id_sha1,information_user_id_sha1,liste_projet_new_file)
         
         
-        VALUES ('$t')") ; 
+        VALUES ('$t','$information_user_info','$tiempo')") ; 
      
        
         
