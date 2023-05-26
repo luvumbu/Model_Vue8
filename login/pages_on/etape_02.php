@@ -1,6 +1,4 @@
 <div class="" id="etape_02">
-
-
 <h1 class="text_center" style="margin:100px">
 Quel type de site web voulez-vous?
 </h1>
