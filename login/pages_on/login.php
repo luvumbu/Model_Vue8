@@ -22,6 +22,8 @@ Liste des option dans le menu
 <link rel="stylesheet" href="pages_on/header_1.css">
 <script src="class/js/js_add/add_liste_projet_exe.js"></script>
 <script src="class/js/js_add/header_2_add_blog.js"></script> 
+<script src="class/js/js_upload/update_value.js"></script> 
+
 <div id="cookie_table"> </div>
 <div id="cookie_table2"></div>
 <div id="cookie_table3"></div>
