@@ -46,7 +46,11 @@ session_start();
 toutes les focti
 --> 
 <script src="class/js/js_off/login_user.js"></script>  
+<script src="class/js/js_off/login_user.js"></script>  
+
 <script src="class/js/js_add/dowload_img.js"></script>  
+<script src="class/js/js_add/add_group_affiche_form.js"></script>  
+
  
  
 
