@@ -14,6 +14,9 @@
   public $row = array();
   public $list_row =array();
 
+  public $list_a =array();
+
+
  
 
   function __construct($servername,$username,$password,$dbname) {
@@ -53,6 +56,58 @@
         
       }
       $conn->close();
+  }
+
+  function all_data_json(){
+    $a=array();
+
+ 
+ 
+
+    for($i = 0 ; $i<count($this->list_row) ; $i++){
+     
+      array_push($a,$this->list_row[$i]);
+    }
+    
+     echo "[" ; 
+     echo "{" ; 
+    for($i = 0 ; $i<count($a) ; $i++){
+      echo '"'.$this->row[fmod($i, count($this->row))].'"' ; 
+      echo ':';
+      echo '"'.$a[$i].'"'  ; 
+      if($i!=count($a)-1){
+        echo "," ;
+          }
+    
+    if(fmod($i, count($this->row))==count($this->row)-1)
+    {
+    
+    if(count($this->row)!=$i){
+        if($i==count($a)-1){
+     echo "}" ;
+       }
+       else {
+     
+      echo '"":""';
+     echo "}" ;
+     echo ",";
+     echo "{" ; 
+    
+       }
+    }
+    else {
+     
+     
+     
+    
+       
+    //  echo ",";
+      //echo "{" ; 
+    }
+    
+    }
+    } 
+    echo "]" ; 
   }
 
 }
