@@ -47,7 +47,7 @@ include("pages_on/001.php");
    fonction dans le fichier  
 -->
 <div class="options_style">
-    <div onclick="header_2_add_blog(this)" id="header_2_add_blogs" class="cursor_pointer">
+    <div onclick="add_liste_projet_exe(this)" id="header_2_add_blogs" class="cursor_pointer">
         
         <div  class="cursor_pointer" >
         
@@ -104,7 +104,7 @@ include("pages_on/001.php");
 
 
 <script>
-    function    add_group(){
+    function    voir_group(){
         alert("add_group") ; 
     }
 </script>

@@ -33,6 +33,7 @@ colors_1_.push(colors_1);
 n_plus = 0  ; 
 
 function add_liste_projet_exe(_this){
+  document.getElementById("header_2_add_blogs").className="display_none" ;
 
 
   add_element_array_parent_int.push(n_plus) ; 
