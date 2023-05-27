@@ -4,15 +4,9 @@ header("Access-Control-Allow-Origin: *");
 include("link.php") ; 
  
       $t = time(date_default_timezone_set('Europe/Paris')) ; 
-      $tiempo = date("Y-m-d",$t);
-
- 
- $liste_group_name = $_POST["liste_group_name"] ; 
-
-   
-     $information_user_info = $_SESSION["information_user_id_sha1"] ; 
- 
- 
+      $tiempo = date("Y-m-d",$t); 
+      $liste_group_name = $_POST["liste_group_name"] ;    
+      $information_user_info = $_SESSION["information_user_id_sha1"] ;  
       $apple = new Insertion_Bdd(
         $servername,
         $username,

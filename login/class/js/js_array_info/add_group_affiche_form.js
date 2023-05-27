@@ -9,3 +9,6 @@ function add_group_affiche_form(_this){
     xhttp.send();
 
 }
+function add_group_affiche_form_disable(){
+    document.getElementById("id_div_global_style1").innerHTML ="" ; 
+}
