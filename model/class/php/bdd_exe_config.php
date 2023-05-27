@@ -192,20 +192,16 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_comment (
 
 $execution_formulaire_php->set_action ("CREATE TABLE liste_group2 (
   liste_comment_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-
   liste_group_id_sha1  VARCHAR(200) NOT NULL, 
   liste_group_ip  VARCHAR(200) NOT NULL, 
   liste_group_name  VARCHAR(200) NOT NULL, 
   liste_group_ip  VARCHAR(200) NOT NULL, 
   liste_group_liste_projet_id  VARCHAR(200) NOT NULL, 
-
   liste_group_information_user_id  VARCHAR(200) NOT NULL, 
   liste_group_information_user_id_sha1  VARCHAR(200) NOT NULL, 
   liste_group_liste_projet_id_sha1  VARCHAR(200) NOT NULL, 
   liste_group_liste_projet_child_sha1  VARCHAR(200) NOT NULL, 
-  liste_group_new_file  VARCHAR(200) NOT NULL, 
- 
- 
+  liste_group_new_file  VARCHAR(200) NOT NULL,  
   liste_group_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
 
@@ -252,20 +248,6 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_img (
   liste_img_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
  
-
-
-
-
-
- 
-
- 
-  
-
-
-
-
-
 
 $execution_formulaire_php->set_action ("CREATE TABLE info_cookie (
   info_cookie_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
