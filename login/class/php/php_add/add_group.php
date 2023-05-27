@@ -7,7 +7,7 @@ include("link.php") ;
       $tiempo = date("Y-m-d",$t);
 
  
- 
+ $liste_group_name = $_POST["liste_group_name"] ; 
 
    
      $information_user_info = $_SESSION["information_user_id_sha1"] ; 
@@ -23,9 +23,9 @@ include("link.php") ;
             
        
         $apple->set_msg_valudation("inserttion ok ") ;  
-        $apple->set_sql("INSERT INTO liste_group (liste_group_id_sha1,liste_group_information_user_id_sha1,liste_group_new_file)
+        $apple->set_sql("INSERT INTO liste_group (liste_group_id_sha1,liste_group_information_user_id_sha1,liste_group_new_file,liste_group_name)
                 
-        VALUES ('$t','$information_user_info','$tiempo')") ; 
+        VALUES ('$t','$information_user_info','$tiempo','$liste_group_name')") ; 
         $apple->execution() ;
  
         

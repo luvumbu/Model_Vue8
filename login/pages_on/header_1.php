@@ -66,7 +66,8 @@ include("pages_on/001.php");
              Ajouter des images
             </div> 
     </div> 
-    <div  class="cursor_pointer" onclick="add_group(this)" title="all_picture">
+ 
+    <div  class="cursor_pointer" onclick="add_group_affiche_form(this)" title="all_picture">
         <div>
             <img src="https://img.icons8.com/dusk/50/document--v1.png" alt="document--v1"/>
 
