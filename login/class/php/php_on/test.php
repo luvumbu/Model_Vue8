@@ -43,68 +43,37 @@ for($i = 0 ; $i<count($apple->list_row) ; $i++){
   array_push($a,$apple->list_row[$i]);
 }
 
- 
-
-
- 
-
-
-
-
  echo "[" ; 
-
-
  echo "{" ; 
 for($i = 0 ; $i<count($a) ; $i++){
- 
-
   echo '"'.$apple->row[fmod($i, count($apple->row))].'"' ; 
   echo ':';
-
   echo '"'.$a[$i].'"'  ; 
-  
-   
-
   if($i!=count($a)-1){
     echo "," ;
       }
-      else {
-    
- 
-   
-      }
-
-
- 
-
 
 if(fmod($i, count($apple->row))==count($apple->row)-1)
 {
- 
-  
 
- 
-
-
-
-if(count($apple->row)==$i){
-  
-}
-else {
- 
- 
- 
-  if($i==count($a)-1){
+if(count($apple->row)!=$i){
+    if($i==count($a)-1){
  echo "}" ;
    }
    else {
  
-  echo '"x":"x"';
+  echo '"":""';
  echo "}" ;
  echo ",";
  echo "{" ; 
 
    }
+}
+else {
+ 
+ 
+ 
+
    
 //  echo ",";
   //echo "{" ; 
@@ -113,21 +82,7 @@ else {
 }
 } 
 echo "]" ; 
-   /*
- 
 
-[
-    {
-            "name":"John",
-            "age":30        
-    },
-    {
-        "name":"John",
-        "age":30        
-}
-]
-
-*/
 
  ?>
 
