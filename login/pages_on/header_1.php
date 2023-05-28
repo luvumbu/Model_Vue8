@@ -103,8 +103,4 @@ include("pages_on/001.php");
 
 
 
-<script>
-    function    voir_group(){
-        alert("add_group") ; 
-    }
-</script>
+ 

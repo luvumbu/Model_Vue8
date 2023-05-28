@@ -1,9 +1,5 @@
 
 function update_value(_this){
-
- 
-
-
     var ok = new Information("class/php/php_update/update_value.php"); // création de la classe 
     ok.add("_this_value", _this.value); // ajout de l'information pour lenvoi 
     ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi  

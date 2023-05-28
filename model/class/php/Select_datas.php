@@ -7,18 +7,11 @@
   public $username;
   public $password;
   public $dbname;
-
   public $sql;
 
 
   public $row = array();
   public $list_row =array();
-
-  public $list_a =array();
-
-
- 
-
   function __construct($servername,$username,$password,$dbname) {
     $this->servername = $servername;
     $this->username = $username;
@@ -95,17 +88,7 @@
     
        }
     }
-    else {
-     
-     
-     
-    
-       
-    //  echo ",";
-      //echo "{" ; 
-    }
-    
-    }
+   }
     } 
     echo "]" ; 
   }

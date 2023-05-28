@@ -15,7 +15,8 @@ $apple = new Insertion_Bdd(
       );
       $apple->set_msg_valudation("up ok") ;  
 
-
+// i correspond a input 
+// t correspond a textarea
       if($_POST["_this_id"][0]=="i"){
             $apple->set_sql('UPDATE `liste_projet` SET `liste_projet_description1` = "'.$_this_value.'" WHERE  `liste_projet_id_sha1` = "'.$_this_title.'"') ; 
       }
