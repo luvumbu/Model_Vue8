@@ -208,6 +208,8 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  para.src=src_img5;
  para.className="input_color";
  para.title=this.responseText; 
+ para.setAttribute("onclick","dowload_img(this)") ; 
+
  
  para.setAttribute("title",this.responseText) ;
  para.setAttribute("style","margin-left:45px") ;
