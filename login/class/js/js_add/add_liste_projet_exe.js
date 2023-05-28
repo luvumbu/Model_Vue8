@@ -193,16 +193,19 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  para.src=src_img3 ;
  para.className="input_color";
  para.title=this.responseText; 
- 
+ para.setAttribute("onclick","update_liste_projet_visibilite1(this)") ; 
  para.setAttribute("title",this.responseText) ;
+ 
  para.setAttribute("style","margin-left:45px") ;
  para.setAttribute("class","cursor_pointer") ;   
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
 
 
  
+
+
  var  para = document.createElement("img");
- para.src=src_img4 ;
+ para.src=src_img5;
  para.className="input_color";
  para.title=this.responseText; 
  
@@ -212,8 +215,11 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
 
 
+
+
+
  var  para = document.createElement("img");
- para.src=src_img5;
+ para.src=src_img4 ;
  para.className="input_color";
  para.title=this.responseText; 
  
@@ -229,10 +235,12 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  para.title=this.responseText; 
  
  para.setAttribute("title",this.responseText) ;
- para.setAttribute("style","margin-left:45px") ;
+ para.setAttribute("style","margin-left:85px") ;
  para.setAttribute("class","cursor_pointer") ;   
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
 
+
+ 
  var  para = document.createElement("div");
  para.setAttribute("id","parent_"+this.responseText) ; 
  document.getElementById("id_div_global_style1_"+this.responseText).appendChild(para);
