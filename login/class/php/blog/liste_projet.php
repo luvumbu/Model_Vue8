@@ -100,6 +100,14 @@ if($apple2->verif_info!=0){
 
 
 
+
+if($apple2->verif_info!=0){
+  $test = $apple2->list_row[1] ;
+}
+else{
+  $test = 0 ; 
+}
+ 
 //  !!!!!!!
 
 $apple3 = new Select_datas($servername,$username,$password,$dbname);
@@ -238,7 +246,7 @@ if($apple1->verif_info!=0){
    $apple1->all_data_json() ;
 }
 else {
-  include("404.php") ;
+  echo '["404_1"]' ; 
 }
 
     echo "," ; 
@@ -247,7 +255,7 @@ else {
       $apple2->all_data_json() ;
    }
    else {
-     include("404.php") ;
+     echo '["404_2"]' ; 
    }
    echo "," ; 
  
@@ -255,7 +263,7 @@ else {
     $apple3->all_data_json() ;
  }
  else {
-   include("404.php") ;
+   echo '["404_3"]' ; 
  }
 
  echo "," ; 
@@ -264,7 +272,7 @@ else {
   $apple4->all_data_json() ;
 }
 else {
- include("404.php") ;
+ echo '["404_4"]' ; 
 }
 echo "," ; 
  
@@ -272,7 +280,7 @@ if($apple5->verif_info!=0){
  $apple5->all_data_json() ;
 }
 else {
-include("404.php") ;
+echo '["404_5"]' ; 
 }
 echo "," ; 
  
@@ -280,7 +288,7 @@ if($apple6->verif_info!=0){
  $apple6->all_data_json() ;
 }
 else {
-include("404.php") ;
+echo '["404_6"]' ; 
 }
 
 echo "]";
