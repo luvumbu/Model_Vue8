@@ -55,7 +55,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
   }
   else{
-    echo "[404]";
+     
   }
 
 

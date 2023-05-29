@@ -60,6 +60,9 @@ $apple1 = new Select_datas($servername,$username,$password,$dbname);
 if($apple1->verif_info!=0){
   $test = $apple1->list_row[1] ;
 }
+else{
+  $test = 0 ; 
+}
 
 
 
@@ -223,12 +226,13 @@ $apple6 = new Select_datas($servername,$username,$password,$dbname);
 if($apple6->verif_info!=0){
   $test = $apple6->list_row[1] ;
 }
+
  
+   
+
+ 
+ ;
     echo "[";
-
- 
-
-
 
 if($apple1->verif_info!=0){
    $apple1->all_data_json() ;
@@ -279,7 +283,9 @@ else {
 include("404.php") ;
 }
 
-    echo "]";
+echo "]";
+ 
+
 
 
  ?>
