@@ -8,6 +8,7 @@
   public $password;
   public $dbname;
   public $sql;
+  public $verif_info= 0;
 
 
   public $row = array();
@@ -41,6 +42,7 @@
      
 
           array_push($this->list_row,$row[$value]);
+          $this->verif_info = "1" ; 
         }
     
       
