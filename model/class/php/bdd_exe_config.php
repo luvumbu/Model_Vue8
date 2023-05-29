@@ -66,24 +66,30 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_projet (
   liste_projet_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
   liste_projet_id_sha1 VARCHAR(200) NOT NULL,
   liste_projet_id_parent VARCHAR(200) NOT NULL,
-
   liste_projet_id_sha1_general VARCHAR(200) NOT NULL,
-  
-
   liste_projet_ip VARCHAR(200) NOT NULL,
   liste_projet_img VARCHAR(200) NOT NULL,
-
-
   liste_projet_name VARCHAR(200) NOT NULL, 
   liste_projet_description1 TEXT(2000) NOT NULL,
   liste_projet_description2 TEXT(2000) NOT NULL,
   liste_projet_visibilite1 TEXT(200) NOT NULL,
   liste_projet_visibilite2 TEXT(200) NOT NULL,
-  liste_projet_type VARCHAR(200) NOT NULL, 
-  
+  liste_projet_type VARCHAR(200) NOT NULL,   
   information_user_id_sha1 VARCHAR(200) NOT NULL, 
   liste_projet_new_file  VARCHAR(200) NOT NULL, 
   liste_projet_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+
+
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_projet_remove_log (
+
+  liste_projet_remove_log_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  liste_projet_remove_log_id_sha1 VARCHAR(200) NOT NULL, 
+  liste_projet_remove_log_id_sha1_name VARCHAR(200) NOT NULL, 
+
+  liste_projet_remove_log_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
 
 

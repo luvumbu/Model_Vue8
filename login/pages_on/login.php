@@ -277,4 +277,9 @@ if($_SESSION["information_user_id_sha1"]==""){
 <meta http-equiv="refresh" content="0"
 <?php
 }
+
+
+
+
+
 ?>

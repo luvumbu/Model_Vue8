@@ -6,6 +6,16 @@ include("link.php") ;
 $child = $_POST["child"] ;
 $parent = $_POST["parent"] ; 
  
+
+
+ 
+
+if($_SESSION["information_user_id_sha1"]!="" )
+{
+echo $_SESSION["information_user_id_sha1"] ; 
+}
+
+
 $apple = new Insertion_Bdd(
       $servername,
       $username,
