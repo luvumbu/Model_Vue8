@@ -15,9 +15,7 @@ $servername="localhost";
  
 // Si la connexion ne pas bonne avec la BDD on efface le fichier de connexion
 try {
-  $_SESSION['remove'] = true;
-
-  
+    $_SESSION['remove'] = true;  
     $conn = new PDO("mysql:host=$servername;dbname=".$dbname, $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -35,7 +35,6 @@ function exe(){ // Si la connexion est ok return true si non false
       
 }
 function set_action($sql){
- 
 if($this->exe()){
 // Create connection
 $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
@@ -53,11 +52,7 @@ if ($conn->connect_error) {
         return $this->exe_resul ; 
     }
 }  
-
-
 // exemple d'execution
-
-
  /* 
  $execution_formulaire_php = new Bdd_class(
   $servername,

@@ -74,7 +74,7 @@ if (!file_exists($filename_config) || !file_exists($filename_config2)) {
     Racine vue.js
 -->
     <?php
-    include("model/class/php/Class.php");
+    include("model/class/php/body.php");
     //include("json_active.php");
     // fichier configuration à l'intérieur 
     // contenu général de la page dans class\php\index_body.php 

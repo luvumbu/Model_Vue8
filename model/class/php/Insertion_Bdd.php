@@ -5,6 +5,7 @@ class Insertion_Bdd {
     public $username ; 
     public $password ; 
     public $dbname ; 
+    public $sql ="0"; 
 
   function __construct(
     $servername,
@@ -38,6 +39,7 @@ class Insertion_Bdd {
   }
 
   function execution(){
+ 
                             // Create connection
                 $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
                 // Check connection
@@ -45,13 +47,21 @@ class Insertion_Bdd {
                 die("Connection failed: " . $conn->connect_error);
                 }
   
-                $this->sql  ;
+  
 
-                if ($conn->query($this->sql) === TRUE) {
-                echo  $this->msg_valudation ; 
-                } else {
-                echo "Error: " . $this->sql . "<br>" . $conn->error;
+
+                if($this->sql!="0"){
+                  if ($conn->query($this->sql) === TRUE) {
+                    echo  $this->msg_valudation ; 
+                    } else {
+                    echo "Error: " . $this->sql . "<br>" . $conn->error;
+                    }
                 }
+                else {
+                  echo "?" ; 
+                }
+
+
 
                 $conn->close();
                 }
@@ -67,13 +77,7 @@ class Insertion_Bdd {
 
 
 // donner le nom de la BDD 
-/*
 
-$dbname="root";
-$username="root";
-$password="root";
-$servername="localhost";
-*/
 
 //etape n°2 
 
@@ -83,24 +87,5 @@ donner le champ de la bdd la vous souhaité envoyer les donne
 vous pouvez envoyer egalement un message dans set messafe
 
 */
-/*
-
-$apple = new Insertion_Bdd(
-
-  $servername,
-  $username,
-  $password,
-  $dbname
-  
-  );
-  
-  $apple->set_msg_valudation("Enregistrement ok") ;  
-  $apple->set_sql("INSERT INTO showcoords (adresse_ip)     VALUES ('sopreano.168.0.1')") ; 
-  $apple->execution() ; 
+ ?>
  
-  
-*/
-
-
-
-?>

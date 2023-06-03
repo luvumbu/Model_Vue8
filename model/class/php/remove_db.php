@@ -7,11 +7,8 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch(PDOException $e) { 
-    //echo "Connection failed: " . $e->getMessage();
-
-   
+    //echo "Connection failed: " . $e->getMessage();   
     unlink('model/class/php/connexion.php');
-
  // si le programme trouve une erreur de connexion il efface le fichier de configuration
  // Connexion.php   
   }

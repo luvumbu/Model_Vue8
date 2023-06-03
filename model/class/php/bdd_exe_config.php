@@ -9,7 +9,7 @@ Fichier de configuration appartir du renvoi de requette lorsque le fichier Conne
 */
 header("Access-Control-Allow-Origin: *");
 include("bdd_class_exe.php") ; // nom de la fonction a ajouter 
-include("insert_data.php") ; // nom de la fonction a ajouter 
+
 /*
 // Pour factorise le code on utilise une classe creer sur le meme dossier bdd_class_exe.php
 // Puis bdd_class_exe.php 

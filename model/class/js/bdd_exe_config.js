@@ -5,13 +5,11 @@ view/config
 
 */
 function bdd_exe_config(){
- 
- 
+
     var dbname=     document.getElementById("dbname").value; 
     var password=   document.getElementById("password").value; 
     var username=   document.getElementById("username").value; 
     var checkBox_checked ="";
-
  
 
 if(checkBox.checked){

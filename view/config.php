@@ -37,6 +37,7 @@
 
 
 <style>
+  /*
   .myCheck{
     padding:15px;
   }
@@ -45,6 +46,7 @@
     background-color:red;
     width:40px;
   }
+  */
 </style>
 
 

@@ -9,10 +9,9 @@
   public $dbname;
   public $sql;
   public $verif_info= 0;
-
-
   public $row = array();
   public $list_row =array();
+
   function __construct($servername,$username,$password,$dbname) {
     $this->servername = $servername;
     $this->username = $username;
@@ -52,7 +51,7 @@
       }
       $conn->close();
   }
-
+ 
   function all_data_json(){
     $a=array();
 
