@@ -1,11 +1,5 @@
 <?php 
 session_start(); 
- 
-  
-
-  
-
-
 // echo count($_SESSION["option_remove_name_x"]) ;
 ?>
 <!DOCTYPE html>
@@ -58,22 +52,13 @@ toutes les focti
 <script src="class/js/js_array_info/voir_group.js"></script>  
 <script src="class/js/js_remove/option_remove.js"></script>  
 <script src="class/js/js_on/option_redirection.js"></script>  
-
-
-
-
-
-
-
- 
+<script src="class/js/js_array_info/voir_liste_projet.js"></script>  
 <link rel="stylesheet" href="src/css/index.css">
 <div id="el"></div>
 <?php 
   if(isset($_SESSION["information_user_id"])){
 }
 include("class/php/php_off/verif.php");
-
-
 ?>
 </div>
 </body>

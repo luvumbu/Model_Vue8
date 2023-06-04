@@ -96,7 +96,10 @@ $apple1 = new Select_datas($servername,$username,$password,$dbname);
 
 
 
-    if(count($apple1->list_row)>0){
+ 
+
+
+    if(count($apple1->list_row)!=0){
       echo "[";
       echo $apple1->all_data_json() ; 
       echo "," ; 
@@ -109,6 +112,7 @@ $apple1 = new Select_datas($servername,$username,$password,$dbname);
       echo '["404"]' ; 
     }
 
+ 
 
 
 

@@ -42,15 +42,44 @@ for(var i = n_projet.length-1; i>-1 ; i--){
 
  
 
+
+
+var calculer = 0 ; 
+
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
   var myObj = JSON.parse(this.responseText);
   console.log(myObj) ; 
+
+ 
+
+
+
+  calculer = myObj[0][0].information_user_id_sha1.length ; 
+
+
   }
 };
 xmlhttp.open("GET", "http://localhost/Model_Vue8/model/class/php/liste_projet.php/"+n_final, true);
 xmlhttp.send();
+
+
+
+
+
+
+
+
+const myTimeout = setTimeout(myGreeting, 250);
+
+function myGreeting() {
+  console.log(calculer) ; 
+
+  if(calculer==0){
+    window.location.replace("../404.html");
+  }
+}
 </script>
 
  

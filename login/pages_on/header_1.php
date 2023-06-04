@@ -57,6 +57,19 @@ include("pages_on/001.php");
                 Créer un Blog
             </div> 
     </div>
+
+    <div onclick="voir_liste_projet(this)" id="header_2_add_blogs" class="cursor_pointer">
+        
+        <div  class="cursor_pointer" >
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACj0lEQVR4nO2a309SYRjH+e9s68JN7bYLb1pqtdRDulbdYM0u2rzICNYGgXVVbZSrcQQRzLlEpMNPEfDHCYlOHnDDA5jybefFcMy4AC3f151n+453z969ez7neZ/3OZy9Op1mDNmctbNj/vUVIw2as3Z2tA2iLpBPPIEiGltScWMS3qlueG1d8Nq7EHjfi+LmZMvrKEdSY1BjORWIuhBkW8sS/few5b+PZUcvws7riPL9ED5dQ/WnteW1FNF4viDi8gOs+Yax9O4qwnwfeyCHkgW+Vz3w2bvJ1kovjkIRn6GcMbX1UJTzzEhNLxF13YDTfImIf3EZB5KFwYxM9ZDfWrE/ZTMjolbsNnoyohW7TFmNaMUuU3pqaZ1dpigjWmeXKawR7TVepiQjWmeXKesjF6azV7ImrEz3ITDdTxSZGULUzWHVO4LKtpkdkIhrEEVpEdjfaJDqi7iG2AGJzXKQ0h+gyP4Gqb6Yh2MHJCuMwe8YgH/6ZqMcA8gKD9kBCTlvo1pZP7G1sL+OED/IEAjP/QWiJoEfZgOk9M2IxMLjpiCJhXGUMs/pB/keGkMu+bYpSG7tDXKhR/SDJD/fRamw0hSklA+QOdSDRFyN9bG38wXKzlKDL+LmWAC5Uw9486sJCe8I0ZZgPgZR59AOEnaP1gMOzxw/eTL+41fn0A4S4vX1gOPzBkixcaK4z1D3k+OZdpCYh0N5N0gCrpZTyETsROpY9ZULQcRm9fSDKKIRAq/HYSl54sRSfQLPkV5DPQhkGwrJCQQ/3oKUduDX3irRj5SD+HZTE2x9fDiQLNgOGhDz6BH36MlY/cPF6Hct25lI0UCOTMuIrG0t/LMaaecKx1krf9orHBfmUo1muv9vvwEz4OA4JecEUgAAAABJRU5ErkJggg==">
+        </div>
+            <div>
+                Mes archives
+            </div> 
+    </div>
+
+
+
     <div  class="cursor_pointer" onclick="dowload_img(this)" title="all_picture">
         <div>
             <img src="https://img.icons8.com/pastel-glyph/50/null/image--v1.png"/>
@@ -72,9 +85,7 @@ include("pages_on/001.php");
             <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/50/external-document-statistical-analysis-flatart-icons-lineal-color-flatarticons.png" alt="external-document-statistical-analysis-flatart-icons-lineal-color-flatarticons"/>
 
         </div>
-            <div>
-            Voir groupe
-            </div> 
+            <div>Voir groupe</div> 
     </div> 
 
 
@@ -104,3 +115,10 @@ include("pages_on/001.php");
 
 
  
+
+
+<script>
+    function mes_archives(_this){
+        console.log("OK") ; 
+    }
+</script>
