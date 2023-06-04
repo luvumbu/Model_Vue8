@@ -56,6 +56,8 @@
     $a=array();
 
  
+
+    
  
 
     for($i = 0 ; $i<count($this->list_row) ; $i++){
@@ -63,6 +65,20 @@
       array_push($a,$this->list_row[$i]);
     }
     
+
+
+
+
+
+ 
+if(count($this->list_row)>0){
+
+
+
+ 
+
+
+
      echo "[" ; 
      echo "{" ; 
     for($i = 0 ; $i<count($a) ; $i++){
@@ -92,7 +108,14 @@
    }
     } 
     echo "]" ; 
+
+
+    
   }
+  else {
+    echo '["404"]' ; 
+  }
+}
 
 }
 
