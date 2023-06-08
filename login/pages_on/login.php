@@ -274,6 +274,8 @@ function liste_projet_img_exe(_this){
 if($_SESSION["information_user_id_sha1"]==""){
     session_destroy();
 ?>
+
+
 <meta http-equiv="refresh" content="0"
 <?php
 }
