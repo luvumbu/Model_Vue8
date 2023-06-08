@@ -33,8 +33,15 @@ colors_1_.push(colors_1);
 n_plus = 0  ; 
 
 function add_liste_projet_exe(_this){
+  //document.getElementById("id_div_global_style1").innerHTML="" ; 
   document.getElementById("header_2_add_blogs").className="display_none" ;
+  
+  document.getElementById("id_div_global_style2").innerHTML="" ; 
 
+  var form_general = document.getElementsByClassName("form_general") ;
+ 
+  
+ 
 
   add_element_array_parent_int.push(n_plus) ; 
 

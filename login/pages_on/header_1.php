@@ -88,8 +88,18 @@ include("pages_on/001.php");
             <div>Voir groupe</div> 
     </div> 
 
+    <div  class="cursor_pointer" onclick="myGreeting()" title="all_picture">
+        <div>
+            <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/50/external-document-statistical-analysis-flatart-icons-lineal-color-flatarticons.png" alt="external-document-statistical-analysis-flatart-icons-lineal-color-flatarticons"/>
+
+        </div>
+            <div>Voir Projet</div> 
+    </div> 
 
 
+
+
+    
 
     
  

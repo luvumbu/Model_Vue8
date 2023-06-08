@@ -11,7 +11,7 @@ session_start();
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="src/img/all/favicon.jpg">
 </head>
-<body id="my_body"    >
+<body id="my_body">
 
 <div id="information_user_info"></div>
 <!-- 
