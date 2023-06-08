@@ -21,7 +21,7 @@ function link(_this){
 function myGreeting() {
 
   
-  var url = "http://localhost/Model_Vue8/login/class/php/php_on/voir_link.php";
+  var url = "class/php/php_on/voir_link.php";
   var xmlhttp = new XMLHttpRequest();
   
       xmlhttp.onreadystatechange = function() {

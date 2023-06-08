@@ -1,7 +1,7 @@
 function    voir_group(){
     let   array_voir_group = [];
        var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost/Model_Vue8/login/class/php/php_on/voir_group.php";
+var url = "class/php/php_on/voir_group.php";
 
 
 xmlhttp.onreadystatechange = function() {
