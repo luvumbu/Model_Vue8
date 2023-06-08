@@ -53,6 +53,8 @@ toutes les focti
 <script src="class/js/js_remove/option_remove.js"></script>  
 <script src="class/js/js_on/option_redirection.js"></script>  
 <script src="class/js/js_array_info/voir_liste_projet.js"></script>  
+<script src="class/js/js_array_info/link.js"></script>  
+
 <link rel="stylesheet" href="src/css/index.css">
 <div id="el"></div>
 <?php 
