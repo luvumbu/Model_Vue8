@@ -64,6 +64,7 @@ node.id="liste_projet_description1" ;
 node.value=array_local[0][0].liste_projet_description1 ; 
 node.setAttribute("onkeyup","update_value(this)");
 node.setAttribute("id","i_"+array_local[0][0].liste_projet_id_sha1);
+  node.setAttribute("class","input_class_general");
 node.setAttribute("title",array_local[0][0].liste_projet_id_sha1);
 document.getElementById("id_div_global_style2").appendChild(node);
 
@@ -72,12 +73,13 @@ node.id="liste_projet_description2" ;
 node.value=array_local[0][0].liste_projet_description2 ; 
 node.setAttribute("onkeyup","update_value(this)");
 node.setAttribute("id","t_"+array_local[0][0].liste_projet_id_sha1);
+  node.setAttribute("class","text_area_class_general");
 node.setAttribute("title",array_local[0][0].liste_projet_id_sha1);
 document.getElementById("id_div_global_style2").appendChild(node);
 
 
 
-
+/*
 
 
 var node = document.createElement("div");
@@ -126,7 +128,7 @@ var node = document.createElement("div");
 node.id="information_user_id_sha1" ;  
 node.innerHTML=array_local[0][0].information_user_id_sha1 ;  
 document.getElementById("id_div_global_style2").appendChild(node);
-
+*/
 var node = document.createElement("div");
 node.id="liste_projet_new_file" ;  
 node.innerHTML=array_local[0][0].liste_projet_new_file ;  
@@ -177,6 +179,8 @@ node.id="liste_projet_reg_date" ;
   node.value=array_local[1][f].liste_projet_description1 ; 
   node.setAttribute("onkeyup","update_value(this)");
   node.setAttribute("id","i_"+array_local[1][f].liste_projet_id_sha1);
+  node.setAttribute("class","input_class_general");
+
   node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
   document.getElementById("id_div_global_style2").appendChild(node);
   
@@ -186,13 +190,15 @@ node.id="liste_projet_reg_date" ;
   node.setAttribute("onkeyup","update_value(this)");
   node.setAttribute("id","t_"+array_local[1][f].liste_projet_id_sha1);
   node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
+  node.setAttribute("class","text_area_class_general");
+
   document.getElementById("id_div_global_style2").appendChild(node);
   
   
   
   
   
-  
+  /*
   var node = document.createElement("div");
   node.id="liste_projet_id" ;  
   node.innerHTML=array_local[1][f].liste_projet_id ;  
@@ -239,13 +245,14 @@ node.id="liste_projet_reg_date" ;
   node.id="information_user_id_sha1" ;  
   node.innerHTML=array_local[1][f].information_user_id_sha1 ;  
   document.getElementById("id_div_global_style2").appendChild(node);
-  
+  */
   var node = document.createElement("div");
   node.id="liste_projet_new_file" ;  
   node.innerHTML=array_local[1][f].liste_projet_new_file ;  
   document.getElementById("id_div_global_style2").appendChild(node);
   var node = document.createElement("div");
   node.id="liste_projet_reg_date" ; 
+
   
   }
 
