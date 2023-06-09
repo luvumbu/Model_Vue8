@@ -6,6 +6,7 @@ let src_img3_2 = "https://img.icons8.com/material-two-tone/40/null/invisible.png
 let src_img4 = "https://img.icons8.com/ios-glyphs/40/null/link--v1.png" ; 
 let src_img5 ="https://img.icons8.com/ios/40/null/image-file.png";
 let src_img6 ="https://img.icons8.com/ios/50/null/info--v1.png";
+let stc_img7 = "https://img.icons8.com/ios/100/domain--v1.png";
 let src_img_hd ="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-443446.jpg&fm=jpg";
 let add_liste_projet_exe_info ="";
 
