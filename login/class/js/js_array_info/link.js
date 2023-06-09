@@ -1,4 +1,5 @@
 function link(_this){
+
   document.getElementById("id_div_global_style2").innerHTML="" ; 
 
 
@@ -263,9 +264,10 @@ node.id="liste_projet_reg_date" ;
 
 }
 
-
-
-
        
 }
 
+
+function link_w3(_this){
+   window.location.replace("../blog.php/"+_this.title);
+}

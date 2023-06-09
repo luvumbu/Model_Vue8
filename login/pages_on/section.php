@@ -71,7 +71,8 @@
         color:white ; 
     }
     .n_nombre{
-        background-color:rgba(100,50,200,0.3) ; 
+        background-color:rgba(100,50,200,0.2) ; 
+        width:12%;
         
      
          
@@ -216,7 +217,7 @@ var node = document.createElement("img");
 node.setAttribute("src","https://img.icons8.com/ios/30/domain--v1.png") ; 
 node.setAttribute("class","margin_right_100px cursor_pointer") ;
 node.setAttribute("style","margin-left:45px") ;  
-node.setAttribute("onclick","link(this)") ;  
+node.setAttribute("onclick","link_w3(this)") ;  
 node.setAttribute("title",array_voir_liste_projet[i].liste_projet_id_sha1) ;  
 document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
 
