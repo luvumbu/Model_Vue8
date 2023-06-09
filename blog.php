@@ -77,7 +77,7 @@ function myGreeting() {
   console.log(calculer) ; 
 
   if(calculer==0){
-    window.location.replace("../404.html");
+  //  window.location.replace("../404.html");
   }
 }
 </script>

@@ -236,6 +236,26 @@ node.setAttribute("title",array_voir_liste_projet[i].liste_projet_id_sha1) ;
 document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
 
 
+var node = document.createElement("img");
+ 
+
+
+
+if(array_voir_liste_projet[i].liste_projet_img==""){
+    node.setAttribute("src","https://img.icons8.com/pastel-glyph/30/null/image--v1.png") ; 
+
+} 
+else{
+    node.setAttribute("src","src/img/all/"+array_voir_liste_projet[i].liste_projet_img) ; 
+
+}
+node.setAttribute("class","margin_right_100px cursor_pointer") ;
+node.setAttribute("style","margin-left:45px;width:30px") ;  
+node.setAttribute("onclick","dowload_img(this)") ;  
+node.setAttribute("title",array_voir_liste_projet[i].liste_projet_id_sha1) ;  
+document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
+
+
 
 
 var node = document.createElement("img");
@@ -286,5 +306,6 @@ document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendC
 
 </script>
 
+ 
 
 <div id="id_div_global_style2"></div>
