@@ -275,19 +275,7 @@ if($_SESSION["information_user_id_sha1"]==""){
     session_destroy();
 ?>
 
-<style>
-.input_class_general{
-width:100% ;
-padding:15px;
-background-color:red;
-}
-.text_area_class_general{
-    width:100% ;
-    padding:15px;
-    background-color:red;
 
-}
-</style>
 <meta http-equiv="refresh" content="0"
 <?php
 }
