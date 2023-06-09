@@ -49,6 +49,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
     'liste_projet_id_sha1',
     'liste_projet_ip',
     'liste_projet_name',
+    'liste_projet_img',
     'liste_projet_description1',
     'liste_projet_description2',
     'liste_projet_visibilite1',

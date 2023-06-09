@@ -80,6 +80,30 @@ document.getElementById("id_div_global_style2").appendChild(node);
 
 
 
+
+var node = document.createElement("img");
+node.id="liste_projet_description2" ;  
+node.src="src/img/all/"+array_local[0][0].liste_projet_img ; 
+node.style="width:200px" ;   
+node.setAttribute("onclick","dowload_img3(this)"); 
+node.setAttribute("title",array_local[0][0].liste_projet_id_sha1);
+document.getElementById("id_div_global_style2").appendChild(node);
+
+
+
+
+
+
+
+
+
+var node = document.createElement("div");
+node.id="liste_projet_description2" ;  
+node.innerHTML=array_local[0][0].liste_projet_reg_date ; 
+ 
+document.getElementById("id_div_global_style2").appendChild(node);
+
+
 /*
 
 
@@ -130,12 +154,7 @@ node.id="information_user_id_sha1" ;
 node.innerHTML=array_local[0][0].information_user_id_sha1 ;  
 document.getElementById("id_div_global_style2").appendChild(node);
 */
-var node = document.createElement("div");
-node.id="liste_projet_new_file" ;  
-node.innerHTML=array_local[0][0].liste_projet_new_file ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-var node = document.createElement("div");
-node.id="liste_projet_reg_date" ;  
+ 
    
 
 
@@ -198,6 +217,38 @@ node.id="liste_projet_reg_date" ;
   
   
   
+
+
+
+
+
+  if(array_local[1][f].liste_projet_img!=""){
+      var node = document.createElement("img");
+  node.src="src/img/all/"+array_local[1][f].liste_projet_img ;
+ 
+    node.style="width:200px" ;
+     
+  node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
+  node.setAttribute("class","text_area_class_general cursor_pointer");
+  node.setAttribute("onclick","dowload_img3(this)");  
+
+  document.getElementById("id_div_global_style2").appendChild(node);
+
+  }
+  else {
+    var node = document.createElement("img");
+    node.style="width:50px;height:50px" ;
+      node.src=src_img5 ; 
+      node.setAttribute("onclick","dowload_img3(this)");  
+       
+    node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
+    node.setAttribute("class","text_area_class_general cursor_pointer");
+  
+    document.getElementById("id_div_global_style2").appendChild(node);
+
+  }
+
+
   
   /*
   var node = document.createElement("div");

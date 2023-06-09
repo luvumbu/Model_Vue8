@@ -49,6 +49,8 @@ toutes les focti
 <script src="class/js/js_off/login_user.js"></script> 
 <script src="class/js/js_add/dowload_img.js"></script> 
 <script src="class/js/js_add/dowload_img2.js"></script>  
+<script src="class/js/js_add/dowload_img3.js"></script>  
+
 
 <script src="class/js/js_array_info/add_group_affiche_form.js"></script>  
 <script src="class/js/js_array_info/voir_group.js"></script>  

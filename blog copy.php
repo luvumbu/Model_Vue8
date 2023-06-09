@@ -7,8 +7,32 @@
 <script>
 
 
-console.log(window.location.href) ; 
+var n_projet = ""  ; 
 
+for(var i = window.location.href.length-1 ; i>0 ; i-- ){
+   
+  if(window.location.href[i]=="/"){
+    break ; 
+  }
+
+  n_projet = n_projet+window.location.href[i] ; 
+
+
+}
+
+
+var n_final = "" ; 
+for(var i = n_projet.length-1; i>-1 ; i--){
+ 
+
+
+  console.log(n_projet[i]) ;  
+  n_final = n_final+n_projet[i] ; 
+ 
+ }
+
+
+ 
 
 n_ = 0 ; 
 nom_localisation="";
@@ -39,9 +63,9 @@ console.log(nom_localisation) ;
 
 
 if(nom_localisation=="localhost" || nom_localisation=="127.0.0.1"){
-  alert("LOCAL ok") ; 
+   
 }
-/*
+ 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -78,7 +102,7 @@ function myGreeting() {
   //  window.location.replace("../404.html");
   }
 }
-*/
+ 
 </script>
 
  
