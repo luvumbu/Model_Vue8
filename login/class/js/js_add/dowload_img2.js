@@ -21,18 +21,9 @@ ok.push(); // envoie l'information au code pkp
 
  
 function fileInput_action(){
-  
-
   document.getElementById("parent_fileInput2").className="parent_fileInput4" ; 
-
- 
-  
-   
-
-  
-   fileInput.files.length =0;
-   fileInput.files[0]="";
-
+  fileInput.files.length =0;
+  fileInput.files[0]="";
 }
 
 

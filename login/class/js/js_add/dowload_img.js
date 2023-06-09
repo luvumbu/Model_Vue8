@@ -4,7 +4,7 @@ var fileInput_files_length = false ;
 
  
 
-let  liste_projet_img= "" ; 
+var  liste_projet_img= "" ; 
 function dowload_img(_this) {
 
   liste_projet_img  = _this.title ; 

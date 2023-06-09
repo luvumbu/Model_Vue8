@@ -3,48 +3,52 @@
  session_start() ; 
  header("Access-Control-Allow-Origin: *");
 
+include("Select_datas.php") ;  
 
-include("Select_datas.php") ;   
-$REMOTE_ADDR = $_SERVER['REMOTE_ADDR'] ; 
-
+$eman="";
+$name="";
 
  
 
- $n_projet = "" ; 
+  for($i=strlen($_SERVER['PHP_SELF'])-1; $i>-1;$i--){
+     
+      if($_SERVER['PHP_SELF'][$i]=='/'){
+        break ; 
+      }
+      $eman = $eman.$_SERVER['PHP_SELF'][$i] ; 
+  }
 
+  $eman = $eman;
 
-for ($i =strlen($_SERVER['PHP_SELF'])-1 ; $i>0; $i --){
- if($_SERVER['PHP_SELF'][$i]=="/"){
-  break ; 
- }
+ 
 
- $n_projet =  $n_projet.$_SERVER['PHP_SELF'][$i] ; 
+  for($i=strlen($eman)-1; $i>-1;$i--){
+     
+ 
 
+  $name = $name.$eman[$i] ;
+ 
 }
- 
 
 
-
-$n_projet  = strrev($n_projet);
 
  
-
-
-
  
   
- 
 
 
 
-$apple1 = new Select_datas($servername,$username,$password,$dbname);
+$apple = new Select_datas($servername,$username,$password,$dbname);
 
   array_push(
-    $apple1->row,
+    $apple->row,
 
     'liste_projet_id',
     'liste_projet_id_sha1',
+    'liste_projet_id_parent',
+    'liste_projet_id_sha1_general',
     'liste_projet_ip',
+    'liste_projet_img',
     'liste_projet_name',
     'liste_projet_description1',
     'liste_projet_description2',
@@ -53,73 +57,19 @@ $apple1 = new Select_datas($servername,$username,$password,$dbname);
     'liste_projet_type',
     'information_user_id_sha1',
     'liste_projet_new_file',
-    'liste_projet_reg_date'  
+    'liste_projet_reg_date'
+    
+
     );
  
-    $apple1->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_sha1` ="'.$n_projet.'"';
-    $apple1->execution();
-    $myJSON = json_encode($apple1->list_row); 
-
-
-
-
-   
-
-
-    $apple2 = new Select_datas($servername,$username,$password,$dbname);
-
-  array_push(
-    $apple2->row,
-
-    'liste_projet_id',
-    'liste_projet_id_sha1',
-    'liste_projet_ip',
-    'liste_projet_name',
-    'liste_projet_description1',
-    'liste_projet_description2',
-    'liste_projet_visibilite1',
-    'liste_projet_visibilite2',
-    'liste_projet_type',
-    'information_user_id_sha1',
-    'liste_projet_new_file',
-    'liste_projet_reg_date'  
-    );
- 
-    $apple2->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_parent` ="'.$apple1->list_row[1].'"';
-    $apple2->execution();
-    $myJSON = json_encode($apple2->list_row); 
+    $id_information_user_sha1 =$_SESSION["information_user_id_sha1"] ; 
+    $apple->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_sha1`="'.$name.'"';
+    $apple->execution();
+    $myJSON = json_encode($apple->list_row); 
 
     // echo   $myJSON ; 
  
-
-    
-
-
-
- 
-
-
-    if(count($apple1->list_row)!=0){
-      echo "[";
-      echo $apple1->all_data_json() ; 
-      echo "," ; 
-      echo $apple2->all_data_json() ; 
-      
-      
-      echo "]";
-    }
-    else {
-      echo '["404"]' ; 
-    }
-
- 
-
-
-
-
- 
- 
-
+  echo $apple->all_data_json() ; 
 
  ?>
 
