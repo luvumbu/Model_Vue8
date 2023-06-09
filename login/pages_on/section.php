@@ -251,7 +251,7 @@ else{
 }
 node.setAttribute("class","margin_right_100px cursor_pointer") ;
 node.setAttribute("style","margin-left:45px;width:30px") ;  
-node.setAttribute("onclick","dowload_img(this)") ;  
+node.setAttribute("onclick","dowload_img2(this)") ;  
 node.setAttribute("title",array_voir_liste_projet[i].liste_projet_id_sha1) ;  
 document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
 
