@@ -30,7 +30,7 @@ function fileInput_action(){
 
 
 function myTimer() {
-  alert("okok 2 ") ; 
+
   const date = new Date();
 console.log(date.toLocaleTimeString());
 console.log(fileInput.files.length);

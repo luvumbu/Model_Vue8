@@ -83,9 +83,7 @@ xmlhttp.onreadystatechange = function() {
  
   //calculer = myObj[0][0].information_user_id_sha1.length ; 
 
- console.log("Info") ; 
- console.log(myObj) ; 
- console.log("Info") ; 
+
 
 //"http://localhost/Model_Vue8/model/class/php/liste_projet.php/"+n_final
   }
@@ -102,7 +100,7 @@ const myTimeout = setTimeout(m404, 100);
 
 function m404() {
  
-   console.log(val_statu[0]);
+   
    if(val_statu[0]=="404"){
 
  
@@ -115,6 +113,11 @@ document.getElementById("info").appendChild(para);
 
 
 
+   }
+   else{
+    console.log("traitement ok") ; 
+console.log(val_statu);
+console.log("traitement ok") ; 
    }
 }
 
