@@ -83,8 +83,16 @@ document.getElementById("id_div_global_style2").appendChild(node);
 
 var node = document.createElement("img");
 node.id="liste_projet_description2" ;  
+
+if(array_local[0][0].liste_projet_img!=""){
 node.src="src/img/all/"+array_local[0][0].liste_projet_img ; 
 node.style="width:200px" ;   
+}
+else{
+  node.src=src_img5 ; 
+
+}
+
 node.setAttribute("onclick","dowload_img3(this)"); 
 node.setAttribute("title",array_local[0][0].liste_projet_id_sha1);
 document.getElementById("id_div_global_style2").appendChild(node);
@@ -97,11 +105,71 @@ document.getElementById("id_div_global_style2").appendChild(node);
 
 
 
+
+
+var node = document.createElement("div"); 
+node.id="div_elementss"
+document.getElementById("id_div_global_style2").appendChild(node);
+
+
+ 
+
+var node = document.createElement("img"); 
+node.style="margin:15px;" ; 
+node.src=src_img2 ;  
+node.title=array_local[0][0].liste_projet_id_sha1 ;  
+
+node.onclick="add_liste_projet_exe2(this)";
+node.setAttribute("onclick","add_liste_projet_exe2(this)") ;   
+document.getElementById("div_elementss").appendChild(node);
+
+
+var node = document.createElement("img"); 
+node.style="margin:15px;" ; 
+node.setAttribute("onclick","update_liste_projet_visibilite1(this)") ; 
+node.title=array_local[0][0].liste_projet_id_sha1 ;  
+
+if(array_local[0][0].liste_projet_visibilite1!="i"){
+node.src=src_img3 ;  
+}
+else{
+  node.src=src_img3_2 ;  
+}
+
+document.getElementById("div_elementss").appendChild(node);
+
+
+
+
+var node = document.createElement("img"); 
+node.style="margin:15px;" ; 
+node.src=stc_img7 ;  
+node.title=array_local[0][0].liste_projet_id_sha1  ;  
+
+node.setAttribute("onclick","link_w3(this)") ; 
+document.getElementById("div_elementss").appendChild(node);
+
+ 
+
+
+
+
+
+
 var node = document.createElement("div");
 node.id="liste_projet_description2" ;  
+
+
 node.innerHTML=array_local[0][0].liste_projet_reg_date ; 
  
 document.getElementById("id_div_global_style2").appendChild(node);
+
+
+
+
+
+
+
 
 
 /*
@@ -222,11 +290,13 @@ document.getElementById("id_div_global_style2").appendChild(node);
 
 
 
-  if(array_local[1][f].liste_projet_img!=""){
+  if(array_local[1][f].liste_projet_img==""){
       var node = document.createElement("img");
   node.src="src/img/all/"+array_local[1][f].liste_projet_img ;
+      node.src=src_img5 ; 
  
-    node.style="width:200px" ;
+      node.style="width:100px;height:100px" ;
+
      
   node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
   node.setAttribute("class","text_area_class_general cursor_pointer");
@@ -237,18 +307,18 @@ document.getElementById("id_div_global_style2").appendChild(node);
   }
   else {
     var node = document.createElement("img");
-    node.style="width:50px;height:50px" ;
-      node.src=src_img5 ; 
-      node.setAttribute("onclick","dowload_img3(this)");  
-       
+    node.style="width:100px;height:100px" ;
+      node.src="src/img/all/"+array_local[1][f].liste_projet_img ; 
+      node.setAttribute("onclick","dowload_img3(this)");         
     node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
-    node.setAttribute("class","text_area_class_general cursor_pointer");
-  
+    node.setAttribute("class","text_area_class_general cursor_pointer");  
     document.getElementById("id_div_global_style2").appendChild(node);
-
   }
 
 
+
+
+  
   
   /*
   var node = document.createElement("div");

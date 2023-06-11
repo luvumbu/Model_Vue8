@@ -76,7 +76,7 @@ background-color:rgba(100,140,190,0.7) ;
 }
 .text_area_class_general{
     width:100% ;
-    pad10ing:15px;
+    
  height:150px;
  
  margin-bottom:100px;
