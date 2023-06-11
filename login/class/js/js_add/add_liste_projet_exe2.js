@@ -16,6 +16,14 @@ function myGreeting() {
   xhttp.onload = function() {
   
 
+    var node = document.createElement("div");
+    node.id="parent_"+ this.responseText ;  
+ 
+    node.setAttribute("title", this.responseText);
+    document.getElementById("id_div_global_style2").appendChild(node);
+
+
+
 
 
      
@@ -27,18 +35,18 @@ function myGreeting() {
   node.setAttribute("class","input_class_general");
 
   node.setAttribute("title", this.responseText);
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+ this.responseText).appendChild(node);
   
   var node = document.createElement("textarea");
   node.id="liste_projet_description2" ;  
-  node.placeholder= "Votre tire" ; 
+  node.placeholder= "Votre description" ; 
 
   node.setAttribute("onkeyup","update_value(this)");
   node.setAttribute("id","t_"+ this.responseText);
   node.setAttribute("title", this.responseText);
   node.setAttribute("class","text_area_class_general");
 
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+ this.responseText).appendChild(node);
 
 
 
@@ -46,26 +54,32 @@ function myGreeting() {
 
 
 
+  var node = document.createElement("img");
+ 
+  node.setAttribute("title",this.responseText) ;
+  node.src=src_img5;
+  node.setAttribute("onclick","dowload_img(this)") ; 
+  document.getElementById("parent_"+ this.responseText).appendChild(node);
 
 
-
-
-  var node = document.createElement("input");
-  node.id="liste_projet_description1" ;  
-  node.placeholder= "Votre tire" ; 
-  node.setAttribute("onkeyup","update_value(this)");
-  node.setAttribute("id","i_"+ this.responseText);
-  node.setAttribute("class","input_class_general");
-
-  node.setAttribute("title", this.responseText);
-  document.getElementById("id_div_global_style2").appendChild(node);
 
 
 
 
   
+ 
+  var node = document.createElement("img");
+  node.src=src_img1;
+  node.setAttribute("title",this.responseText) ;
+  node.setAttribute("onclick","option_remove2(this)") ;
+  document.getElementById("parent_"+ this.responseText).appendChild(node);
+
+
+ 
+
+  
   window.scrollTo( 0,scrollTo_);
-  scrollTo_ = scrollTo_ + 800 ; 
+  scrollTo_ = scrollTo_ + 1800 ; 
 
 
 

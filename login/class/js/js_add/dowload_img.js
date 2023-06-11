@@ -6,7 +6,7 @@ var fileInput_files_length = false ;
 
 var  liste_projet_img= "" ; 
 function dowload_img(_this) {
-
+  window.scrollTo( 0,0);
   liste_projet_img  = _this.title ; 
   document.getElementById("parent_label_fileInput").className="parent_label_fileInput" ; 
   document.getElementById("parent_fileInput2").className="parent_fileInput2" ; 
