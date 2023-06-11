@@ -397,13 +397,37 @@ document.getElementById("id_div_global_style2").appendChild(node);
 
   node.title=array_local[1][f].liste_projet_id_sha1 ; 
   node.setAttribute("onclick","option_remove2(this)") ;  
-
-
   document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
+
+
+//
  
 
 
+  var  node = document.createElement("img");
 
+  if(array_local[1][f].liste_projet_visibilite1!="i"){
+    node.src=src_img3 ;
+}
+else {
+  node.src=src_img3_2 ;
+}
+  node.className="input_color";
+  node.style="margin-bottom:25px" ;
+  node.title=array_local[1][f].liste_projet_id_sha1; 
+  node.setAttribute("onclick","update_liste_projet_visibilite1(this)") ; 
+ 
+  
+ 
+  node.setAttribute("class","cursor_pointer") ;   
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
+
+
+
+  
+
+
+//
 
   var node = document.createElement("div");
   node.id="liste_projet_new_file" ;  
