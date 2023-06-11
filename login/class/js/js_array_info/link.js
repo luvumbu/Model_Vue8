@@ -257,20 +257,37 @@ document.getElementById("id_div_global_style2").appendChild(node);
 
  if(array_local[1][0]!="404"){
   for(var f =0 ; f<array_local[1].length; f++){
-    console.log(f) ; 
-  console.log(array_local[1][f].liste_projet_reg_date) ;
+ 
 
+
+
+    var node = document.createElement("div");
+ 
+  
+    node.id="parent_"+array_local[1][f].liste_projet_id_sha1 ;
+    document.getElementById("id_div_global_style2").appendChild(node);
+
+
+
+
+
+
+ 
+
+
+
+    
 
 
   var node = document.createElement("input");
-  node.id="liste_projet_description1" ;  
+  node.id=array_local[1][f].liste_projet_id_sha1 ;  
   node.value=array_local[1][f].liste_projet_description1 ; 
   node.setAttribute("onkeyup","update_value(this)");
   node.setAttribute("id","i_"+array_local[1][f].liste_projet_id_sha1);
   node.setAttribute("class","input_class_general");
 
   node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("textarea");
   node.id="liste_projet_description2" ;  
@@ -280,7 +297,7 @@ document.getElementById("id_div_global_style2").appendChild(node);
   node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
   node.setAttribute("class","text_area_class_general");
 
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   
   
@@ -302,7 +319,7 @@ document.getElementById("id_div_global_style2").appendChild(node);
   node.setAttribute("class","text_area_class_general cursor_pointer");
   node.setAttribute("onclick","dowload_img3(this)");  
 
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
 
   }
   else {
@@ -312,7 +329,7 @@ document.getElementById("id_div_global_style2").appendChild(node);
       node.setAttribute("onclick","dowload_img3(this)");         
     node.setAttribute("title",array_local[1][f].liste_projet_id_sha1);
     node.setAttribute("class","text_area_class_general cursor_pointer");  
-    document.getElementById("id_div_global_style2").appendChild(node);
+    document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   }
 
 
@@ -324,54 +341,74 @@ document.getElementById("id_div_global_style2").appendChild(node);
   var node = document.createElement("div");
   node.id="liste_projet_id" ;  
   node.innerHTML=array_local[1][f].liste_projet_id ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("div");
   node.id="liste_projet_id_sha1" ;  
   node.innerHTML=array_local[1][f].liste_projet_id_sha1 ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("div");
   node.id="liste_projet_ip" ;  
   node.innerHTML=array_local[1][f].liste_projet_ip ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("div");
   node.id="liste_projet_name" ;  
   node.innerHTML=array_local[1][f].liste_projet_name ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   
   
   var node = document.createElement("div");
   node.id="liste_projet_description2" ;  
   node.innerHTML=array_local[1][f].liste_projet_description2 ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("div");
   node.id="liste_projet_visibilite1" ;  
   node.innerHTML=array_local[1][f].liste_projet_visibilite1 ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("div");
   node.id="liste_projet_visibilite2" ;  
   node.innerHTML=array_local[1][f].liste_projet_visibilite2 ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("div");
   node.id="liste_projet_type" ;  
   node.innerHTML=array_local[1][f].liste_projet_type ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   
   var node = document.createElement("div");
   node.id="information_user_id_sha1" ;  
   node.innerHTML=array_local[1][f].information_user_id_sha1 ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   */
   var node = document.createElement("div");
+ 
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
+
+
+
+  var node = document.createElement("img");
+  node.src=src_img1 ;
+  node.style="margin-bottom:25px" ;
+
+  node.title=array_local[1][f].liste_projet_id_sha1 ; 
+  node.setAttribute("onclick","option_remove2(this)") ;  
+
+
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
+ 
+
+
+
+
+  var node = document.createElement("div");
   node.id="liste_projet_new_file" ;  
-  node.innerHTML=array_local[1][f].liste_projet_new_file ;  
-  document.getElementById("id_div_global_style2").appendChild(node);
+  node.innerHTML=array_local[1][f].liste_projet_reg_date ;  
+  document.getElementById("parent_"+array_local[1][f].liste_projet_id_sha1 ).appendChild(node);
   var node = document.createElement("div");
   node.id="liste_projet_reg_date" ; 
 

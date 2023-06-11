@@ -39,6 +39,31 @@ function myGreeting() {
   node.setAttribute("class","text_area_class_general");
 
   document.getElementById("id_div_global_style2").appendChild(node);
+
+
+
+
+
+
+
+
+
+
+
+  var node = document.createElement("input");
+  node.id="liste_projet_description1" ;  
+  node.placeholder= "Votre tire" ; 
+  node.setAttribute("onkeyup","update_value(this)");
+  node.setAttribute("id","i_"+ this.responseText);
+  node.setAttribute("class","input_class_general");
+
+  node.setAttribute("title", this.responseText);
+  document.getElementById("id_div_global_style2").appendChild(node);
+
+
+
+
+  
   window.scrollTo( 0,scrollTo_);
   scrollTo_ = scrollTo_ + 800 ; 
 
