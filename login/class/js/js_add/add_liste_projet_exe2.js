@@ -33,14 +33,14 @@ function myGreeting() {
   node.setAttribute("onkeyup","update_value(this)");
   node.setAttribute("id","i_"+ this.responseText);
   node.setAttribute("class","input_class_general");
-
+  node.setAttribute("maxlength","50");
   node.setAttribute("title", this.responseText);
   document.getElementById("parent_"+ this.responseText).appendChild(node);
   
   var node = document.createElement("textarea");
   node.id="liste_projet_description2" ;  
   node.placeholder= "Votre description" ; 
-
+  node.setAttribute("maxlength","255");
   node.setAttribute("onkeyup","update_value(this)");
   node.setAttribute("id","t_"+ this.responseText);
   node.setAttribute("title", this.responseText);

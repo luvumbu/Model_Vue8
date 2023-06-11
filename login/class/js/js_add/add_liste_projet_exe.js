@@ -148,7 +148,11 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  var  para = document.createElement("input");
  para.placeholder="Entrer votre texte" ;
  para.setAttribute("onkeyup","update_value(this)");
+
+ para.setAttribute("maxlength","50");
  para.setAttribute("id","i_"+this.responseText);
+
+ 
 
 
  para.className="input_color";
@@ -169,6 +173,7 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  
  para.placeholder="Entrer votre texte" ;
  para.setAttribute("id","t_"+this.responseText);
+ node.setAttribute("maxlength","800");
  para.setAttribute("onkeyup","update_value(this)");
  
  para.className="input_color";

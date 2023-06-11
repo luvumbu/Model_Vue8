@@ -1,5 +1,5 @@
          <div id="parent_fileInput1">
-             <input type="file" id="fileInput" onclick="fileInput_action()">
+             <input type="file" id="fileInput" maxlength="20" onclick="fileInput_action()">
          </div> 
 <div id="parent_label_fileInput" class="display_none">
           <div>
