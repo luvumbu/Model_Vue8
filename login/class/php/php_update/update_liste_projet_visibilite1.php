@@ -7,6 +7,7 @@ $liste_projet_id_sha1 = $_POST["liste_projet_id_sha1"] ;
 $value_ = $_POST["value_"] ; 
  
  
+
 $apple = new Insertion_Bdd(
       $servername,
       $username,
