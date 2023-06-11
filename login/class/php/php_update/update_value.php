@@ -43,92 +43,11 @@ for($i = 0 ; $i < strlen($_this_value) ; $i++) {
       echo $_this_value[$i] ;
 
       $caractere=substr($_this_value,$i,1);
-   
-      
- 
-                        if (in_array(ord($caractere), $people))
-                  {
-         
-                        switch (ord($caractere)) {
-                              case "195":
-                                   $replace =  str_replace("195","",ord($caractere));
-                              break;
+     
 
-                              case "194":
-                                    
-                                    $replace =  str_replace("194","»",ord($caractere));
-                              break;
-                              case "128":
-                                   
-                                    $replace =  str_replace("128","’",ord($caractere));
-
-                              break;
-
-                              case "153":
-                                   
-                                    $replace =  str_replace("153","’",ord($caractere));
-                              break;
-                              case "160":
-                                    $replace =  str_replace("169","à",ord($caractere));
-                              break;
-
-                              case "168":
-                                    $replace =  str_replace("168","è",ord($caractere));
-                                    
-                              break;
-                              case "169":
-                                    $replace =  str_replace("169","é",ord($caractere));
-                              break;
-                              case "170":
-                                    $replace =  str_replace("170","ê",ord($caractere));
-
-                                         
-                              break;
-                              case "171":
-                                    $replace =  str_replace("171","«",ord($caractere));         
-                              break;
-                              case "174":
-                                    $replace =  str_replace("174","î",ord($caractere));         
-                                                            
-                              break;
-                              case "180":
-                                    $replace =  str_replace("180","ô",ord($caractere));         
-                                                                  
-                              break;
-                              case "185":
-                                    $replace =  str_replace("185","ù",ord($caractere));                                      
-                                                                        
-                              break;
-                              case "226":
-                                    $replace =  str_replace("226","’",ord($caractere));                                        
-                              break;
-
-                                
- 
-                         
-                            }
-
-                          
-
-
- 
-
-                  
-                 
-                        $_this_value2 = $_this_value2.$replace;
-
-
-                        //ord($caractere)
-
-                  }
-                  else{
-                       
-                     
-
-             if(ord($caractere)>30 && ord($caractere)<127 ){
+                  if(ord($caractere)>30 && ord($caractere)<256 ){
                         $_this_value2 = $_this_value2.$_this_value[$i] ;
                      }
-                  }  
 
 
      
