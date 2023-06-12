@@ -189,24 +189,21 @@ var para = document.createElement("div");
 para.innerHTML = "<h1>"+val_statu[1][s].liste_projet_description1+"</h1>";
 para.className="page_t1" ;
 para.id="page_t1" ;
-
 document.getElementById("page_t1").appendChild(para);
 
 
 
+var para = document.createElement("a");
+para.innerHTML = "<p>Voir article</p>";
+para.className="page_t1" ;
+para.href=val_statu[1][s].liste_projet_id_sha1 ;
 
- 
+para.id="page_t1" ;
+document.getElementById("page_t1").appendChild(para);
+
+
 
 var para = document.createElement("img");
- 
-
-
-
-
-
-
-
-
 if(val_statu[1][s].liste_projet_img==""){
 
 para.src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600";
@@ -217,25 +214,13 @@ else{
    para.src ="http://"+nom_localisation+"/Model_Vue8/login/src/img/all/"+val_statu[1][s].liste_projet_img;
 }
 else{
-
  para.src ="https://"+nom_localisation+"/login/src/img/all/"+val_statu[1][s].liste_projet_img;
-
-   
-
 }
 
 }
 document.getElementById("page_t1").appendChild(para);
-
-
-
-
-
 var para = document.createElement("div");
 para.innerHTML = "<h3>"+val_statu[1][s].liste_projet_description2+"</h3>";
- 
- 
-
 document.getElementById("page_t1").appendChild(para);
 
 
@@ -243,9 +228,6 @@ document.getElementById("page_t1").appendChild(para);
 
 var para = document.createElement("div");
 para.innerHTML = "<h4>"+val_statu[1][s].liste_projet_reg_date+"</h4>";
- 
- 
-
 document.getElementById("page_t1").appendChild(para);
 
  
