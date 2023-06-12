@@ -121,8 +121,7 @@ document.getElementById("info").appendChild(para);
 
    }
    else{
-    console.log("traitement ok") ; 
-console.log(val_statu);
+
  
 
 
@@ -176,6 +175,84 @@ document.getElementById("page_t1").appendChild(para);
 
 
 console.log("traitement ok") ; 
+
+
+if(val_statu[1][0]!="404"){
+
+
+
+  for(var s= 0 ; s<val_statu[1].length ; s ++){
+
+console.log(val_statu[1][s]) ; 
+
+var para = document.createElement("div");
+para.innerHTML = "<h1>"+val_statu[1][s].liste_projet_description1+"</h1>";
+para.className="page_t1" ;
+para.id="page_t1" ;
+
+document.getElementById("page_t1").appendChild(para);
+
+
+
+
+ 
+
+var para = document.createElement("img");
+ 
+
+
+
+
+
+
+
+
+if(val_statu[1][s].liste_projet_img==""){
+
+para.src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600";
+
+}
+else{
+ if(nom_localisation=="localhost" || nom_localisation=="127.0.0.1"){
+   para.src ="http://"+nom_localisation+"/Model_Vue8/login/src/img/all/"+val_statu[1][s].liste_projet_img;
+}
+else{
+
+ para.src ="https://"+nom_localisation+"/login/src/img/all/"+val_statu[1][s].liste_projet_img;
+
+   
+
+}
+
+}
+document.getElementById("page_t1").appendChild(para);
+
+
+
+
+
+var para = document.createElement("div");
+para.innerHTML = "<h3>"+val_statu[1][s].liste_projet_description2+"</h3>";
+ 
+ 
+
+document.getElementById("page_t1").appendChild(para);
+
+
+
+
+var para = document.createElement("div");
+para.innerHTML = "<h4>"+val_statu[1][s].liste_projet_reg_date+"</h4>";
+ 
+ 
+
+document.getElementById("page_t1").appendChild(para);
+
+ 
+
+  }
+
+}
    }
 }
 
@@ -218,6 +295,18 @@ font-size:1.2em;
 color:rgba(0,0,0,0.1) ; 
  
   }
+
+  @media screen and (max-width: 1200px) {
+    .page_t1{
+    text-align:center ; 
+    max-width: 90%;
+    margin:auto ; 
+  }
+  .page_t1 img{
+   margin-top:50px ; 
+   max-width:90%;
+  }
+}
 </style>
 
 </body>
