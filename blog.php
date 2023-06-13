@@ -162,10 +162,6 @@ para.innerHTML = val_statu[0][0].liste_projet_description2;
 document.getElementById("page_t1").appendChild(para);
 
 
-var para = document.createElement("h4");
-para.innerHTML = val_statu[0][0].liste_projet_reg_date;
-document.getElementById("page_t1").appendChild(para);
-
 
 
 var para = document.createElement("img");
@@ -184,6 +180,16 @@ else{
  
 
 document.getElementById("page_t1").appendChild(para);
+
+
+
+
+var para = document.createElement("h4");
+para.innerHTML = val_statu[0][0].liste_projet_reg_date;
+document.getElementById("page_t1").appendChild(para);
+
+
+
 
 
  

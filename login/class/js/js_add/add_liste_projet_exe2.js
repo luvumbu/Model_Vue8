@@ -40,7 +40,7 @@ function myGreeting() {
   var node = document.createElement("textarea");
   node.id="liste_projet_description2" ;  
   node.placeholder= "Votre description" ; 
-  node.setAttribute("maxlength","255");
+  node.setAttribute("maxlength","1800");
   node.setAttribute("onkeyup","update_value(this)");
   node.setAttribute("id","t_"+ this.responseText);
   node.setAttribute("title", this.responseText);

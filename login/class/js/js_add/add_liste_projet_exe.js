@@ -173,7 +173,7 @@ general_element definis le nom du parent mais comme il est premier il na pas de 
  
  para.placeholder="Entrer votre texte" ;
  para.setAttribute("id","t_"+this.responseText);
- para.setAttribute("maxlength","800");
+ para.setAttribute("maxlength","1800");
  para.setAttribute("onkeyup","update_value(this)");
  
  para.className="input_color";
