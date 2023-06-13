@@ -167,6 +167,25 @@ para.innerHTML = val_statu[0][0].liste_projet_reg_date;
 document.getElementById("page_t1").appendChild(para);
 
 
+
+var para = document.createElement("img");
+ 
+
+if(nom_localisation=="localhost" || nom_localisation=="127.0.0.1"){
+    para.src ="http://"+nom_localisation+"/Model_Vue8/login/src/img/all/qr_code/"+val_statu[0][0].liste_projet_id_sha1+".png";
+}
+else{
+ 
+  para.src ="https://"+nom_localisation+"/login/src/img/all/qr_code/"+val_statu[0][0].liste_projet_id_sha1+".png";
+
+    
+ 
+}
+ 
+
+document.getElementById("page_t1").appendChild(para);
+
+
  
 
  

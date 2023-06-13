@@ -301,6 +301,16 @@ array_2.push(undefined) ;
 
  window.scrollTo( 0,scrollTo_);
 scrollTo_ = scrollTo_ + 800 ; 
+
+ 
+
+var ok = new Information("class/php/php_add/qr_code/index.php"); // création de la classe 
+ok.add("qr_code", "https://luvumbu.com/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
+   
+console.log(ok.info()); // demande l'information dans le tableau
+ok.push(); // envoie l'information au code pkp 
+
+
  
   }
   xhttp.open("GET", "class/php/cookie_table/liste_projet_cookie.php");
