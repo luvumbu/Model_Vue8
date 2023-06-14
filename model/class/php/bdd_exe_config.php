@@ -77,6 +77,7 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_projet (
   liste_projet_type VARCHAR(200) NOT NULL,   
   information_user_id_sha1 VARCHAR(200) NOT NULL, 
   liste_projet_new_file  VARCHAR(200) NOT NULL, 
+  liste_projet_remove  VARCHAR(200) NOT NULL, 
   liste_projet_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
 
@@ -190,6 +191,8 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_comment (
   liste_comment_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
   liste_comment_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
   liste_comment_new_file VARCHAR(200) NOT NULL, 
+  liste_comment_nemove VARCHAR(200) NOT NULL, 
+
   liste_comment_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
 
@@ -224,6 +227,8 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_group (
   liste_group_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
   liste_group_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
   liste_group_new_file VARCHAR(200) NOT NULL, 
+  liste_group_remove VARCHAR(200) NOT NULL, 
+
   liste_group_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
 
@@ -251,6 +256,8 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_img (
   liste_img_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
   liste_img_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
   liste_img_new_file VARCHAR(200) NOT NULL, 
+  liste_img_remove VARCHAR(200) NOT NULL, 
+
   liste_img_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
  
@@ -265,6 +272,8 @@ $execution_formulaire_php->set_action ("CREATE TABLE info_cookie (
   info_cookie_information_user_id_sha1 VARCHAR(200) NOT NULL,
   info_cookie_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
   info_cookie_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
+  info_cookie_remove VARCHAR(200) NOT NULL,
+
 
 
   info_cookie_new_file VARCHAR(200) NOT NULL,

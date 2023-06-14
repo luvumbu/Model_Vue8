@@ -33,6 +33,32 @@ colors_1_.push(colors_1);
 n_plus = 0  ; 
 
 function add_liste_projet_exe(_this){
+
+
+
+  n_ = 0 ; 
+nom_localisation="";
+for(var i = 0 ; i < window.location.href.length ; i ++){
+ 
+ if(window.location.href[i]=="/"){
+  
+ n_ = n_ +1 ; 
+ }
+ else{
+ }
+
+
+ if(n_==2){
+ 
+  if(window.location.href[i]!="/"){
+ 
+     nom_localisation = nom_localisation+window.location.href[i] ;
+  }
+
+ }
+
+}
+
   //document.getElementById("id_div_global_style1").innerHTML="" ; 
   document.getElementById("header_2_add_blogs").className="display_none" ;
   
@@ -305,7 +331,25 @@ scrollTo_ = scrollTo_ + 800 ;
  
 
 var ok = new Information("class/php/php_add/qr_code/index.php"); // création de la classe 
-ok.add("qr_code", "https://luvumbu.com/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
+
+
+if(nom_localisation=="localhost" || nom_localisation=="127.0.0.1"){
+ 
+ok.add("qr_code", "http://"+nom_localisation+"/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
+
+
+
+}
+else{
+ 
+ 
+ 
+
+ok.add("qr_code", "https://"+nom_localisation+"/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
+  
+
+}
+//ok.add("qr_code", "https://luvumbu.com/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
    
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 

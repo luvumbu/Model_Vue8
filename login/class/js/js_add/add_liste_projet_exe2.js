@@ -1,6 +1,4 @@
 function add_liste_projet_exe2(_this){
-  
-
 
   var ok = new Information("class/php/php_add/add_liste_projet.php"); // création de la classe 
  
