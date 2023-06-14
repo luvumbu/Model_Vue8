@@ -23,6 +23,25 @@ include("link.php") ;
                 
         VALUES ('$t','$information_user_info','$tiempo','$liste_group_name')") ; 
         $apple->execution() ;
+
+
+
+
+
+        $apple = new Insertion_Bdd(
+          $servername,
+          $username,
+          $password,
+          $dbname
+          
+          );
+              
+         
+          $apple->set_msg_valudation("inserttion ok ") ;  
+          $apple->set_sql("INSERT INTO liste_group_admin (liste_group_admin_id_sha1,liste_group_admin_information_user_id_sha1,liste_group_admin_new_file,liste_group_admin_name)
+                  
+          VALUES ('$t','$information_user_info','$tiempo','$liste_group_name')") ; 
+          $apple->execution() ;
  
         
 ?>

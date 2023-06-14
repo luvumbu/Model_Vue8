@@ -137,6 +137,72 @@ $liste_projet_img = $_SESSION["liste_projet_img"]  ;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // partie admin 
+
+      $apple = new Insertion_Bdd(
+        $servername,
+        $username,
+        $password,
+        $dbname
+        
+        );
+       
+       
+       
+       
+     
+        
+       
+        $apple->set_msg_valudation("inserttion ok ") ;  
+        $apple->set_sql("INSERT INTO liste_img_admin (liste_img_admin_name,liste_img_admin_id_sha1,liste_img_admin_type,liste_img_admin_ip,liste_img_admin_information_user_id_sha1)
+        
+        
+        VALUES ('$liste_img_type','$liste_img_type_sha1','img','$liste_img_ip','$liste_img_information_user_id_sha1')") ; 
+        
+       
+        
+       
+        $apple->execution() ;
+       
+       
+        
+     
+    
+     
+    
+    
+    $liste_projet_img = $_SESSION["liste_projet_img"]  ; 
+    
+    
+        $apple = new Insertion_Bdd(
+          $servername,
+          $username,
+          $password,
+          $dbname
+          
+          );
+          $apple->set_msg_valudation("name group up") ;  
+          $apple->set_sql('UPDATE `liste_projet_admin` SET `liste_projet_admin_img` = "'.$liste_img_type.'" WHERE  `liste_projet_admin_id_sha1` = "'.$liste_projet_img.'"') ; 
+          $apple->execution() ;
+
+
     
 
 

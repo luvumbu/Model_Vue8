@@ -195,26 +195,7 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_comment (
 
   liste_comment_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
-
-
-/*
-
-$execution_formulaire_php->set_action ("CREATE TABLE liste_group2 (
-  liste_comment_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-  liste_group_id_sha1  VARCHAR(200) NOT NULL, 
-  liste_group_ip  VARCHAR(200) NOT NULL, 
-  liste_group_name  VARCHAR(200) NOT NULL, 
-  liste_group_ip  VARCHAR(200) NOT NULL, 
-  liste_group_liste_projet_id  VARCHAR(200) NOT NULL, 
-  liste_group_information_user_id  VARCHAR(200) NOT NULL, 
-  liste_group_information_user_id_sha1  VARCHAR(200) NOT NULL, 
-  liste_group_liste_projet_id_sha1  VARCHAR(200) NOT NULL, 
-  liste_group_liste_projet_child_sha1  VARCHAR(200) NOT NULL, 
-  liste_group_new_file  VARCHAR(200) NOT NULL,  
-  liste_group_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-  )");
-
-*/
+ 
 
 $execution_formulaire_php->set_action ("CREATE TABLE liste_group (
   liste_group_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
@@ -284,7 +265,222 @@ $execution_formulaire_php->set_action ("CREATE TABLE info_cookie (
 
 
 
+/*
+CLONAGE TABLES INFORMATION GENERAL SANS EFFACEMENT 
+*/
+$execution_formulaire_php->set_action ("CREATE TABLE information_user_admin (
+  information_user_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  information_user_admin_id_sha1 VARCHAR(200) NOT NULL,
+  information_user_admin_ip VARCHAR(200) NOT NULL,
+  information_user_admin_login VARCHAR(200) NOT NULL,
+  information_user_admin_password VARCHAR(200) NOT NULL,   
+  information_user_admin_new_file VARCHAR(200) NOT NULL, 
+  information_user_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
 
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_projet_admin(
+
+  liste_projet_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  liste_projet_admin_id_sha1 VARCHAR(200) NOT NULL,
+  liste_projet_admin_id_parent VARCHAR(200) NOT NULL,
+  liste_projet_admin_id_sha1_general VARCHAR(200) NOT NULL,
+  liste_projet_admin_ip VARCHAR(200) NOT NULL,
+  liste_projet_admin_img VARCHAR(200) NOT NULL,
+  liste_projet_admin_name VARCHAR(200) NOT NULL, 
+  liste_projet_admin_description1 TEXT(2000) NOT NULL,
+  liste_projet_admin_description2 TEXT(2000) NOT NULL,
+  liste_projet_admin_visibilite1 TEXT(200) NOT NULL,
+  liste_projet_admin_visibilite2 TEXT(200) NOT NULL,
+  liste_projet_admin_type VARCHAR(200) NOT NULL,   
+  information_user_id_sha1 VARCHAR(200) NOT NULL, 
+  liste_projet_admin_new_file  VARCHAR(200) NOT NULL, 
+  liste_projet_admin_remove  VARCHAR(200) NOT NULL, 
+  liste_projet_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+
+
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_projet_remove_log_admin (
+
+  liste_projet_remove_log_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  liste_projet_remove_log_admin_id_sha1 VARCHAR(200) NOT NULL, 
+  liste_projet_remove_log_admin_id_sha1_name VARCHAR(200) NOT NULL, 
+
+  liste_projet_remove_log_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+
+
+ 
+
+
+ 
+
+
+
+    $execution_formulaire_php->set_action ("CREATE TABLE showCoords_admin (
+      showCoords_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      showCoords_admin_id_sha1	 VARCHAR(200) NOT NULL,
+      showCoords_admin_id_name	 VARCHAR(200) NOT NULL, 
+      showCoords_admin_ip VARCHAR(30) NOT NULL,
+      showCoords_admin_action VARCHAR(30) NOT NULL,
+      showCoords_admin_x VARCHAR(30) NOT NULL,
+      showCoords_admin_y VARCHAR(30) NOT NULL,
+      showCoords_admin_height VARCHAR(30) NOT NULL,
+      showCoords_admin_width VARCHAR(200),
+
+      showCoords_admin_information_user_id_sha1  VARCHAR(200),
+      showCoords_admin_liste_projet_id_sha1  VARCHAR(200),
+      showCoords_admin_liste_projet_child_sha1  VARCHAR(200),
+
+      showCoords_admin_new_file VARCHAR(200),
+      showCoords_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+      )");  
+  
+  
+
+
+
+ 
+
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_signal_admin (
+  liste_signal_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  liste_signal_admin_id_sha1 VARCHAR(200) NOT NULL,   
+  liste_signal_admin_ip VARCHAR(200) NOT NULL,   
+  
+
+
+  liste_signal_admin_id_name VARCHAR(200) NOT NULL, 
+  liste_signal_admin_description VARCHAR(200) NOT NULL,  
+  liste_signal_admin_information_user_id_sha1 VARCHAR(200) NOT NULL,   
+  liste_signal_admin_liste_projet_id_sha1 VARCHAR(200) NOT NULL, 
+  liste_signal_admin_liste_projet_child_sha1 VARCHAR(200) NOT NULL, 
+
+  liste_signal_admin_new_file VARCHAR(200) NOT NULL,  
+  liste_signal_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_style_admin (
+  liste_style_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  
+
+
+  liste_style_admin_font_size VARCHAR(200) NOT NULL,
+  liste_style_admin_font_family VARCHAR(200) NOT NULL,
+  liste_style_admin_color VARCHAR(200) NOT NULL,
+  liste_style_admin_background_color VARCHAR(200) NOT NULL,
+  liste_style_admin_border_left VARCHAR(200) NOT NULL,
+
+  liste_style_admin_border_right VARCHAR(200) NOT NULL,
+  liste_style_admin_border_bottom VARCHAR(200) NOT NULL,
+  liste_style_admin_border_top VARCHAR(200) NOT NULL,
+  liste_style_admin_margin_left VARCHAR(200) NOT NULL,
+  liste_style_admin_margin_right VARCHAR(200) NOT NULL,
+
+  liste_style_admin_margin_top VARCHAR(200) NOT NULL,
+  liste_style_admin_margin_bottom VARCHAR(200) NOT NULL,
+  liste_style_admin_mode VARCHAR(200) NOT NULL,
+ 
+
+
+ 
+  liste_style_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+
+
+ 
+
+
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_comment_admin (
+  liste_comment_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  
+
+  liste_comment_admin_id_sha1 VARCHAR(200) NOT NULL, 
+  liste_comment_admin_name VARCHAR(200) NOT NULL,
+  liste_comment_admin_ip VARCHAR(200) NOT NULL,
+  liste_comment_admin_information_user_id_sha1 VARCHAR(200) NOT NULL,
+  liste_comment_admin_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
+  liste_comment_admin_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
+  liste_comment_admin_new_file VARCHAR(200) NOT NULL, 
+  liste_comment_admin_nemove VARCHAR(200) NOT NULL, 
+
+  liste_comment_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+ 
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_group_admin (
+  liste_group_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  
+
+  liste_group_admin_id_sha1 VARCHAR(200) NOT NULL, 
+  liste_group_admin_name VARCHAR(200) NOT NULL,
+  liste_group_admin_ip VARCHAR(200) NOT NULL,
+  liste_group_admin_information_user_id_sha1 VARCHAR(200) NOT NULL,
+  liste_group_admin_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
+  liste_group_admin_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
+  liste_group_admin_new_file VARCHAR(200) NOT NULL, 
+  liste_group_admin_remove VARCHAR(200) NOT NULL, 
+
+  liste_group_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+
+
+
+
+
+
+
+
+
+
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_img_admin (
+  liste_img_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  
+
+  liste_img_admin_id_sha1 VARCHAR(200) NOT NULL, 
+  liste_img_admin_name VARCHAR(200) NOT NULL,
+  liste_img_admin_type VARCHAR(200) NOT NULL,
+
+  liste_img_admin_ip VARCHAR(200) NOT NULL,
+  liste_img_admin_information_user_id_sha1 VARCHAR(200) NOT NULL,
+  liste_img_admin_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
+  liste_img_admin_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
+  liste_img_admin_new_file VARCHAR(200) NOT NULL, 
+  liste_img_admin_remove VARCHAR(200) NOT NULL, 
+
+  liste_img_admin_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+ 
+
+$execution_formulaire_php->set_action ("CREATE TABLE info_cookie_admin (
+  info_cookie_admin_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  info_cookie_admin_id_sha1 VARCHAR(200) NOT NULL,
+  info_cookie_admin_name VARCHAR(200) NOT NULL,
+  info_cookie_admin_ip VARCHAR(200) NOT NULL, 
+  info_cookie_admin_action VARCHAR(200) NOT NULL,
+
+  info_cookie_admin_information_user_id_sha1 VARCHAR(200) NOT NULL,
+  info_cookie_admin_liste_projet_id_sha1 VARCHAR(200) NOT NULL,
+  info_cookie_admin_liste_projet_child_sha1 VARCHAR(200) NOT NULL,
+  info_cookie_admin_remove VARCHAR(200) NOT NULL,
+
+
+
+  info_cookie_admin_new_file VARCHAR(200) NOT NULL,
+  info_cookie_admin_reg_date  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+/*
+CLONAGE TABLES INFORMATION GENERAL SANS EFFACEMENT 
+*/
  
 
 

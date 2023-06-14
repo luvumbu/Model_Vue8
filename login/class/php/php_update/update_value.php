@@ -82,4 +82,33 @@ $apple = new Insertion_Bdd(
 
       }
       $apple->execution() ;
+
+
+
+      // partie admin 
+
+
+
+      
+
+
+$apple = new Insertion_Bdd(
+      $servername,
+      $username,
+      $password,
+      $dbname
+      
+      );
+      $apple->set_msg_valudation("") ;  
+
+// i correspond a input 
+// t correspond a textarea
+      if($_POST["_this_id"][0]=="i"){
+            $apple->set_sql('UPDATE `liste_projet_admin` SET `liste_projet_admin_description1` = "'.$_this_value2.'" WHERE  `liste_projet_admin_id_sha1` = "'.$_this_title.'"') ; 
+      }
+      else {
+            $apple->set_sql('UPDATE `liste_projet_admin` SET `liste_projet_admin_description2` = "'.$_this_value2.'" WHERE  `liste_projet_admin_id_sha1` = "'.$_this_title.'"') ; 
+
+      }
+      $apple->execution() ;
 ?>
