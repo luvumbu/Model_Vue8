@@ -2,7 +2,9 @@
 <div id="information_user_id_sha1" title="<?php echo $_SESSION["information_user_id_sha1"] ; ?>"></div>
  <div class="display_flex color_001"> 
     <div class="padding_10">             
-           LUVUMBU        
+                 
+           <b id="titre_page3">LUVUMBU</b>
+             
     </div>
     <div class="padding_10 color_white_2"><div class="color_white">
         <div>

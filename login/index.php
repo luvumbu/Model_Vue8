@@ -13,6 +13,9 @@ session_start();
 </head>
 <body id="my_body">
 
+<script src="class/js/js_upload/change_title.js"></script>  
+ 
+ 
 <div id="information_user_info"></div>
 <!-- 
 
@@ -26,9 +29,36 @@ session_start();
     
     include("pages_off/acceuil1.html") ;
     // si lutilisateur n'est pas connexion
+   ?>
+
+<script>
+    document.title =change_title() ;
+  document.getElementById("titre_page1").innerHTML=change_title();
+  document.getElementById("titre_page2").innerHTML=change_title();
+  
+
+
+</script>
+
+   <?php
   }
   else {
    include("pages_on/login.php") ;
+
+
+
+   ?>
+
+   <script>
+       document.title =change_title() ;
+     document.getElementById("titre_page3").innerHTML=change_title();
+ 
+     
+   
+   
+   </script>
+   
+      <?php
    ?>
 <script src="class/js/js_on/session_destroy.js"></script>
 <?php 
@@ -58,6 +88,9 @@ toutes les focti
 <script src="class/js/js_on/option_redirection.js"></script>  
 <script src="class/js/js_array_info/voir_liste_projet.js"></script>  
 <script src="class/js/js_array_info/link.js"></script>  
+
+
+
 
 
 <style>
@@ -94,6 +127,10 @@ background-color:rgba(100,140,190,0.7) ;
 include("class/php/php_off/verif.php");
 ?>
 </div>
+
+
+
+ 
 </body>
  <link rel="stylesheet" href="css.css">
  </html>
