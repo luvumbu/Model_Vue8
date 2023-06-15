@@ -35,7 +35,6 @@ n_plus = 0  ;
 function add_liste_projet_exe(_this){
 
 
-
   n_ = 0 ; 
 nom_localisation="";
 for(var i = 0 ; i < window.location.href.length ; i ++){

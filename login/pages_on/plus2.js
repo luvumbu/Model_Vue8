@@ -1,4 +1,5 @@
 function plus2(_this){
+
     _this.className="display_none"; 
    let cookie_table_info2 ="";
   

@@ -36,9 +36,6 @@ Liste des option dans le menu
 
     let scrollTo_ = 700 ; 
 function upddate_child_input(_this){
-
- 
-
 var ok = new Information("class/php/php_update/upddate_child_input.php"); // création de la classe 
 ok.add("_this_title", _this.title); // ajout de l'information pour lenvoi 
 ok.add("_this_value", _this.value); // ajout d'une deuxieme information denvoi  

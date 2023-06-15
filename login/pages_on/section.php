@@ -123,7 +123,6 @@
  
     const myTimeout = setTimeout(myGreeting, 400);
 function myGreeting() {
-   
     voir_liste_projet() ;
  
 
@@ -140,6 +139,10 @@ node.setAttribute("id","elements"+i) ;
 node.setAttribute("class","display_flex2 margin_right_100px form_general") ;  
 document.getElementById("id_div_global_style2").appendChild(node);
     
+
+
+if(array_voir_liste_projet[0].liste_projet_description1!=undefined){
+
 
     for(var i = 0 ; i<array_voir_liste_projet.length ; i ++){
         console.log(array_voir_liste_projet[i].liste_projet_description1) ;
@@ -292,7 +295,7 @@ document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendC
 
 
  
- 
+}
 
 
 }
