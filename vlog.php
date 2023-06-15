@@ -91,7 +91,8 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
    'liste_projet_img',
    'liste_projet_description2', 
    'liste_projet_reg_date',
-   'liste_projet_visibilite1'
+   'liste_projet_visibilite1',
+   'liste_projet_id_sha1' 
    
 
    );
@@ -122,7 +123,8 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
    'liste_projet_img',
    'liste_projet_description2', 
    'liste_projet_reg_date',
-   'liste_projet_visibilite1'
+   'liste_projet_visibilite1',
+   'liste_projet_id_sha1' 
    
 
    );
@@ -176,10 +178,22 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
       else {
 
 
+
         if($_SERVER['SERVER_NAME']=="localhost"){
+          echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple->list_row[$i].'" alt="" srcset="">' ; 
 
         }
-        echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple->list_row[$i].'" alt="" srcset="">' ; 
+        else {
+  
+
+          echo '<div>';
+          echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/'.$apple->list_row[$i].'">' ; 
+          echo '</div>';
+          
+ 
+ 
+        }
+
  
       }
 
@@ -191,13 +205,32 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
      case 2:
   
-    if($apple->list_row[$i+2]==""){
-
-          echo '<h3>'.$apple->list_row[$i].'</h3>' ; 
-    }
+ 
   
       
        break;
+
+
+       case 3:
+ 
+
+        if($_SERVER['SERVER_NAME']=="localhost"){
+          echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple->list_row[$i+2].'" alt="" srcset="">' ; 
+
+        }
+        else {
+  
+          echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/qr_code/'.$apple->list_row[$i+2].'.png">' ; 
+          
+ 
+ 
+        }
+
+        echo '<h3>'.$apple->list_row[$i].'</h3>' ; 
+      
+          
+           break;
+           
 
 
  }
@@ -218,106 +251,104 @@ echo '</div>';
 
 
 echo '<div class="page_t1">';
+ 
+
 
 for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
-// echo $apple2->list_row[$i].'<br/>' ; 
-
-// echo(fmod($i, count($apple2->row)) . "<br>");
-
- 
-
- switch (fmod($i, count($apple2->row))) {
-   case 0:
+  // echo $apple2->list_row[$i].'<br/>' ; 
   
-    
- 
- if($apple2->list_row[$i+4]==""){
-   echo '<h1>'.$apple2->list_row[$i].'</h1>' ; 
- }
-
-     
-
-     break;
-   case 1:
-
-    if($apple2->list_row[$i+3]==""){
-     
-      if($apple2->list_row[$i]==""){
-        echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" srcset="">' ; 
- 
-      }
-      else {
-
-
-        if($_SERVER['SERVER_NAME']=="localhost"){
-
-        }
-        echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple2->list_row[$i].'" alt="" srcset="">' ; 
- 
-      }
-
-
-    }
+  // echo(fmod($i, count($apple2->row)) . "<br>");
+  
    
-     
-
-     break;
-
-     case 2:
   
-    if($apple2->list_row[$i+2]==""){
-
-          echo '<h3>'.$apple2->list_row[$i].'</h3>' ; 
-    }
-  
+   switch (fmod($i, count($apple2->row))) {
+     case 0:
+    
       
+   
+   if($apple2->list_row[$i+4]==""){
+     echo '<h1>'.$apple2->list_row[$i].'</h1>' ; 
+   }
+  
+       
+  
        break;
-
-
- }
-
-
-
-
-
-
-}
-
-echo '</div>';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-
-
- 
- 
- 
-
-  if(count( $apple->list_row)==0){
- echo '<img src="https://img.freepik.com/vecteurs-libre/glitch-error-404-page_23-2148105404.jpg?w=2000" alt="" srcset="" style="width:100%">';
+     case 1:
+  
+      if($apple2->list_row[$i+3]==""){
+       
+        if($apple2->list_row[$i]==""){
+          echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" srcset="">' ; 
+   
+        }
+        else {
+  
+  
+  
+          if($_SERVER['SERVER_NAME']=="localhost"){
+            echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple2->list_row[$i].'" alt="" srcset="">' ; 
+  
+          }
+          else {
+    
+  
+            echo '<div>';
+            echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/'.$apple2->list_row[$i].'">' ; 
+            echo '</div>';
+            
+   
+   
+          }
+  
+   
+        }
+  
+  
+      }
+       
+  
+       break;
+  
+       case 2:
+    
+   
+    
+        
+         break;
+  
+  
+         case 3:
+   
+  
+          if($_SERVER['SERVER_NAME']=="localhost"){
+            //echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple2->list_row[$i+2].'" alt="" srcset="">' ; 
+  
+          }
+          else {
+    
+            //echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/qr_code/'.$apple2->list_row[$i+2].'.png">' ; 
+            
+   
+   
+          }
+  
+          echo '<h3>'.$apple2->list_row[$i].'</h3>' ; 
+        
+            
+             break;
+             
+  
+  
+   }
+  
+  
+  
+  
+  
+  
   }
-
-
-
-
+  
+  echo '</div>';
 
 ?>
 
