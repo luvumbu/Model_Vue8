@@ -275,6 +275,10 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
   
        break;
      case 1:
+
+      echo "<div><a href='".$apple2->list_row[$i+4]."'>Voir article</a>
+
+      </div>" ; 
   
       if($apple2->list_row[$i+3]==""){
        
@@ -298,9 +302,11 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
             echo '</div>';
             
    
-   
+
           }
-  
+
+
+       
    
         }
   
@@ -335,7 +341,8 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
   
           echo '<h3>'.$apple2->list_row[$i].'</h3>' ; 
         
-            
+
+  
              break;
              
   
