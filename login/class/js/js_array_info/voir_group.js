@@ -25,6 +25,8 @@ const myTimeout = setTimeout(myGreeting, 5000);
 
 function myGreeting() {
    console.log(array_voir_group) ; 
+
+   
 }
 
    }

@@ -206,17 +206,18 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
      case 2:
   
  
-  
+ 
+      echo '<h3>'.$apple->list_row[$i].'</h3>' ; 
       
        break;
 
 
        case 3:
  
-
+ 
         if($_SERVER['SERVER_NAME']=="localhost"){
-          echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple->list_row[$i+2].'" alt="" srcset="">' ; 
 
+echo "<img src='http://localhost/Model_Vue8/login/src/img/all/qr_code/".$apple->list_row[$i+2].".png'>" ; 
         }
         else {
   
@@ -226,7 +227,7 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
  
         }
 
-        echo '<h3>'.$apple->list_row[$i].'</h3>' ; 
+        echo '<h4>'.$apple->list_row[$i].'</h4>' ; 
       
           
            break;
