@@ -1,6 +1,7 @@
 let   array_voir_liste_projet =["007"];
 
 function    voir_liste_projet(){
+  
  
        var xmlhttp = new XMLHttpRequest();
 var url = "class/php/php_on/voir_liste_projet.php";

@@ -41,8 +41,6 @@ ok.add("_this_title", _this.title); // ajout de l'information pour lenvoi
 ok.add("_this_value", _this.value); // ajout d'une deuxieme information denvoi  
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 
-
-
 }
 
 function upddate_child_textarea(_this){
@@ -61,7 +59,6 @@ function remove_element(_this){
  
     var ok = new Information("class/php/php_remove/remove_element.php"); // création de la classe 
 ok.add("remove_info", _this.title); // ajout de l'information pour lenvoi 
- 
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 
  
@@ -69,9 +66,7 @@ ok.push(); // envoie l'information au code pkp
 
 
 function updatet_child_visibilite1(_this)
-{
-
-     
+{ 
 
 const element = document.getElementById(_this.parentNode.id);
 //element.remove();
@@ -99,7 +94,6 @@ var ok = new Information("class/php/php_update/updatet_child_visibilite1.php"); 
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 
 
-
 }
 
 function updatet_child_visibilite_child(_this){    
@@ -126,6 +120,7 @@ var ok = new Information("class/php/php_update/updatet_child_visibilite_child.ph
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 
 }
+
 function add_child_plus(_this){
     const element = document.getElementById(_this.parentNode.id);
     var ok = new Information("class/php/php_add/add_child_plus.php"); // création de la classe 
@@ -269,6 +264,42 @@ function liste_projet_img_exe(_this){
  
  }
 </style>
+
+
+<style>
+    .display_flexx{
+        display: flex;
+        justify-content: space-around;
+        width:50%;
+margin: auto ; 
+    }
+
+    .g{
+        border : 1px solid rgba(200,0,0,0.3) ;
+    }
+    
+    .d{
+        border : 1px solid rgba(0,200,0,0.3) ;
+    }
+    .v {
+        border : 1px solid rgba(0,0,200,0.3) ;
+
+    }
+
+    .d,.g,.v{
+        width:300px;
+        text-align: center;
+        padding: 10px;
+    }
+    @media screen and (max-width: 1200px) {
+        .display_flexx{
+        display: flex;
+        justify-content: space-around;
+        width:90%;
+margin: auto ; 
+    }
+}
+</style>
 <?php 
 if($_SESSION["information_user_id_sha1"]==""){
     session_destroy();
@@ -286,3 +317,4 @@ include("section.php") ;
 ?>
 
  
+

@@ -1,5 +1,5 @@
 function link(_this){
-
+ 
   document.getElementById("id_div_global_style2").innerHTML="" ; 
 
 
@@ -46,7 +46,6 @@ function myGreeting() {
 
 
 function myGreetingxx() {
-
 
 
 var node = document.createElement("div");
@@ -154,7 +153,7 @@ document.getElementById("div_elementss").appendChild(node);
 
  
 
-
+ 
 
 
 
@@ -172,85 +171,7 @@ document.getElementById("id_div_global_style2").appendChild(node);
 
 
 
-
-
-
-/*
-
-
-var node = document.createElement("div");
-node.id="liste_projet_id" ;  
-node.innerHTML=array_local[0][0].liste_projet_id ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-var node = document.createElement("div");
-node.id="liste_projet_id_sha1" ;  
-node.innerHTML=array_local[0][0].liste_projet_id_sha1 ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-var node = document.createElement("div");
-node.id="liste_projet_ip" ;  
-node.innerHTML=array_local[0][0].liste_projet_ip ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-var node = document.createElement("div");
-node.id="liste_projet_name" ;  
-node.innerHTML=array_local[0][0].liste_projet_name ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-
-
-var node = document.createElement("div");
-node.id="liste_projet_description2" ;  
-node.innerHTML=array_local[0][0].liste_projet_description2 ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-var node = document.createElement("div");
-node.id="liste_projet_visibilite1" ;  
-node.innerHTML=array_local[0][0].liste_projet_visibilite1 ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-var node = document.createElement("div");
-node.id="liste_projet_visibilite2" ;  
-node.innerHTML=array_local[0][0].liste_projet_visibilite2 ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-var node = document.createElement("div");
-node.id="liste_projet_type" ;  
-node.innerHTML=array_local[0][0].liste_projet_type ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-
-var node = document.createElement("div");
-node.id="information_user_id_sha1" ;  
-node.innerHTML=array_local[0][0].information_user_id_sha1 ;  
-document.getElementById("id_div_global_style2").appendChild(node);
-*/
  
-   
-
-
- 
-
-
-
-
-
- /*
- console.log(array_local[0][0].liste_projet_id_sha1) ; 
- console.log(array_local[0][0].liste_projet_ip) ; 
- console.log(array_local[0][0].liste_projet_name) ; 
- console.log(array_local[0][0].liste_projet_description1) ; 
- console.log(array_local[0][0].liste_projet_description2) ; 
- console.log(array_local[0][0].liste_projet_visibilite1) ; 
- console.log(array_local[0][0].liste_projet_visibilite2) ; 
- console.log(array_local[0][0].liste_projet_type) ; 
- console.log(array_local[0][0].information_user_id_sha1) ; 
- console.log(array_local[0][0].liste_projet_new_file) ; 
- console.log(array_local[0][0].liste_projet_reg_date) ; 
-
-*/
- 
-
 
 
 

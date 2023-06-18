@@ -71,6 +71,7 @@ ok.push(); // envoie l'information au code pkp
     }
  
 function myFunction() {
+    
 if (document.documentElement.scrollTop > 100) {
 // console.log(document.documentElement.scrollTop);
 
@@ -128,14 +129,6 @@ ok.add("_this_title", _this.title); // ajout de l'information pour lenvoi
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 
 }
-
-
-
-
- 
-
-
-
 
 function update_liste_projet_child_description2(_this){
 var ok = new Information("class/php/php_update/update_liste_projet_child_description2.php"); // création de la classe 
