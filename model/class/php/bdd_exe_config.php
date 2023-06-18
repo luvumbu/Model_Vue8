@@ -521,3 +521,51 @@ else {
   fclose($f);
 }
       }      
+
+
+
+
+
+
+
+
+
+
+
+$_password = sha1($password) ; 
+
+
+
+
+ 
+include("Insertion_Bdd.php") ; 
+ 
+      $t = time(date_default_timezone_set('Europe/Paris')) ; 
+      $tiempo = date("Y-m-d",$t); 
+
+      $liste_group_name = $_POST["liste_group_name"] ;    
+      $information_user_info = $_SESSION["information_user_id_sha1"] ;  
+      
+      $apple = new Insertion_Bdd(
+        $servername,
+        $username,
+        $password,
+        $dbname
+        
+        );
+            
+       
+        $apple->set_msg_valudation("inserttion ok ") ;  
+        $apple->set_sql("INSERT INTO information_user (information_user_id_sha1,information_user_password,information_user_login)
+                
+        VALUES ('$t','$_password','$username')") ; 
+        $apple->execution() ;
+
+
+
+
+
+ 
+ 
+        
+?>
