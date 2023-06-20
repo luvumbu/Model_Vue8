@@ -83,42 +83,47 @@ para.setAttribute("class","v") ;
 document.getElementById("info_group").appendChild(para);
 
 
-
-
-  for(var x = 0 ; x <array_voir_group[0].length ; x ++){
-   console.log(array_voir_group[0][x].liste_group_name) ; 
-
-   
-var para = document.createElement("div"); 
-para.id = "info_group_"+array_voir_group[0][x].liste_group_id;
  
-para.setAttribute("class","display_flexx") ; 
-document.getElementById("id_div_global_style2").appendChild(para);
 
 
-var para = document.createElement("div"); 
-para.innerHTML = array_voir_group[0][x].liste_group_name;
+if(array_voir_group[0][0].liste_group_name!=undefined){
+   for(var x = 0 ; x <array_voir_group[0].length ; x ++){
+      console.log(array_voir_group[0][x].liste_group_name) ; 
+   
+      
+   var para = document.createElement("div"); 
+   para.id = "info_group_"+array_voir_group[0][x].liste_group_id;
+    
+   para.setAttribute("class","display_flexx") ; 
+   document.getElementById("id_div_global_style2").appendChild(para);
+   
+   
+   var para = document.createElement("div"); 
+   para.innerHTML = array_voir_group[0][x].liste_group_name;
+   
+   para.setAttribute("class","g") ; 
+   document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
+   
+   var para = document.createElement("div"); 
+   para.innerHTML = array_voir_group[0][x].liste_group_reg_date;
+   
+   para.setAttribute("class","d") ; 
+   document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
+   
+   var para = document.createElement("div"); 
+   para.innerHTML = '<img width="20" height="20" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/20/external-link-business-kiranshastry-solid-kiranshastry.png" alt="external-link-business-kiranshastry-solid-kiranshastry"/>';
+   para.title=array_voir_group[0][x].liste_group_id_sha1 ; 
+   para.setAttribute("class","v") ; 
+   document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
+   
+   
+   
+   
+   
+     }
+}
 
-para.setAttribute("class","g") ; 
-document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
 
-var para = document.createElement("div"); 
-para.innerHTML = array_voir_group[0][x].liste_group_reg_date;
-
-para.setAttribute("class","d") ; 
-document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
-
-var para = document.createElement("div"); 
-para.innerHTML = '<img width="20" height="20" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/20/external-link-business-kiranshastry-solid-kiranshastry.png" alt="external-link-business-kiranshastry-solid-kiranshastry"/>';
-para.title=array_voir_group[0][x].liste_group_id_sha1 ; 
-para.setAttribute("class","v") ; 
-document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
-
-
-
-
-
-  }
 
   var para = document.createElement("div"); 
 para.id = "info_group2";

@@ -114,6 +114,15 @@ include("pages_on/001.php");
              Créer un groupe
             </div> 
     </div> 
+
+    <?php 
+
+if($_SESSION["information_user_id"]==1){
+  
+    include("super_user.php");
+    }
+
+?>
 </div>
  <div id="add_liste_projet_div"></div> 
 <div>
