@@ -161,6 +161,7 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
     
  
  if($apple->list_row[$i+4]==""){
+
    echo '<h1>'.$apple->list_row[$i].'</h1>' ; 
  }
 
@@ -205,9 +206,12 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
      case 2:
   
- 
- 
+    if($apple->list_row[$i+2]==""){
+
       echo '<h3>'.$apple->list_row[$i].'</h3>' ; 
+
+    }
+ 
       
        break;
 
@@ -216,18 +220,35 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
  
  
         if($_SERVER['SERVER_NAME']=="localhost"){
+          if($apple->list_row[$i+2]==""){
 
-echo "<img src='http://localhost/Model_Vue8/login/src/img/all/qr_code/".$apple->list_row[$i+2].".png'>" ; 
+            echo "<img src='http://localhost/Model_Vue8/login/src/img/all/qr_code/".$apple->list_row[$i+2].".png'>" ; 
+
+          }
+
         }
         else {
+
+          if($apple->list_row[$i+1]==""){
+            echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/qr_code/'.$apple->list_row[$i+2].'.png">' ; 
+
+
+          }
+
+          
   
-          echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/qr_code/'.$apple->list_row[$i+2].'.png">' ; 
           
  
  
         }
 
+
+
+        if($apple->list_row[$i+1]==""){
         echo '<h4>'.$apple->list_row[$i].'</h4>' ; 
+
+        }
+
       
           
            break;
@@ -276,11 +297,12 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
        break;
      case 1:
 
-      echo "<div><a href='".$apple2->list_row[$i+4]."'>Voir article</a>
 
-      </div>" ; 
   
       if($apple2->list_row[$i+3]==""){
+        echo "<div><a href='".$apple2->list_row[$i+4]."'>Voir article</a>
+
+        </div>" ; 
        
         if($apple2->list_row[$i]==""){
           echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" srcset="">' ; 
@@ -338,8 +360,13 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
    
    
           }
+
+          
   
-          echo '<h3>'.$apple2->list_row[$i].'</h3>' ; 
+          if($apple2->list_row[$i+1]==""){
+              echo '<h3>'. $apple2->list_row[$i].'</h3>' ; 
+          }
+          
         
 
   
