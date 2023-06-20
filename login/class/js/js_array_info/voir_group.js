@@ -82,6 +82,12 @@ para.innerHTML = "Voir groupe";
 para.setAttribute("class","v") ; 
 document.getElementById("info_group").appendChild(para);
 
+var para = document.createElement("div"); 
+para.innerHTML = "Supprimer groupe";
+
+para.setAttribute("class","v") ; 
+document.getElementById("info_group").appendChild(para);
+
 
  
 
@@ -92,7 +98,7 @@ if(array_voir_group[0][0].liste_group_name!=undefined){
    
       
    var para = document.createElement("div"); 
-   para.id = "info_group_"+array_voir_group[0][x].liste_group_id;
+   para.id = "parent_"+array_voir_group[0][x].liste_group_id_sha1;
     
    para.setAttribute("class","display_flexx") ; 
    document.getElementById("id_div_global_style2").appendChild(para);
@@ -102,19 +108,32 @@ if(array_voir_group[0][0].liste_group_name!=undefined){
    para.innerHTML = array_voir_group[0][x].liste_group_name;
    
    para.setAttribute("class","g") ; 
-   document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
+   document.getElementById("parent_"+array_voir_group[0][x].liste_group_id_sha1).appendChild(para);
    
    var para = document.createElement("div"); 
    para.innerHTML = array_voir_group[0][x].liste_group_reg_date;
    
    para.setAttribute("class","d") ; 
-   document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
+   document.getElementById("parent_"+array_voir_group[0][x].liste_group_id_sha1).appendChild(para);
    
    var para = document.createElement("div"); 
    para.innerHTML = '<img width="20" height="20" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/20/external-link-business-kiranshastry-solid-kiranshastry.png" alt="external-link-business-kiranshastry-solid-kiranshastry"/>';
    para.title=array_voir_group[0][x].liste_group_id_sha1 ; 
    para.setAttribute("class","v") ; 
-   document.getElementById("info_group_"+array_voir_group[0][x].liste_group_id).appendChild(para);
+   document.getElementById("parent_"+array_voir_group[0][x].liste_group_id_sha1).appendChild(para);
+   
+
+
+
+   var para = document.createElement("div"); 
+   para.innerHTML = '<img width="20" height="20" src="https://img.icons8.com/color/50/delete-forever.png" alt="delete-forever"/>';
+   para.title=array_voir_group[0][x].liste_group_id_sha1 ; 
+  
+   para.setAttribute("onclick","option_remove3(this)") ; 
+
+   
+   para.setAttribute("class","v cursor_pointer") ; 
+   document.getElementById("parent_"+array_voir_group[0][x].liste_group_id_sha1).appendChild(para);
    
    
    
@@ -146,6 +165,13 @@ document.getElementById("info_group2").appendChild(para);
 
 var para = document.createElement("div"); 
 para.innerHTML = "Voir groupe";
+
+para.setAttribute("class","v") ; 
+document.getElementById("info_group2").appendChild(para);
+
+
+var para = document.createElement("div"); 
+para.innerHTML = "Supprimer groupe";
 
 para.setAttribute("class","v") ; 
 document.getElementById("info_group2").appendChild(para);
