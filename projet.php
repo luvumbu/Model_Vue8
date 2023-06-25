@@ -10,6 +10,10 @@ header("Access-Control-Allow-Origin: *");
   <title>Document</title>
 </head>
 <body>
+
+ 
+
+
 <?php 
 
  
@@ -110,7 +114,7 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
         </div>" ; 
        
         if($apple2->list_row[$i]==""){
-          echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" srcset="">' ; 
+          echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=300" alt="" srcset="">' ; 
    
         }
         else {
@@ -210,12 +214,12 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
   }
  .page_t1{
    text-align:center ; 
-   max-width: 60%;
+   max-width: 30%;
    margin:auto ; 
  }
  .page_t1 img{
   margin-top:50px ; 
-  max-width:60%;
+  max-width:45%;
  }
   .page_t1 h1{
 padding-top:50px;
@@ -244,6 +248,8 @@ color:rgba(0,0,0,0.1) ;
  }
 }
 </style>
+
+</div>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </body>
 </html>
