@@ -377,5 +377,5 @@ else {
 
 
 function link_w3(_this){
-   window.location.replace("../blog.php/"+_this.title);
+   window.location.replace("../vlog.php/"+_this.title);
 }

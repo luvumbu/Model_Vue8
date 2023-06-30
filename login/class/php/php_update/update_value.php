@@ -21,9 +21,7 @@ $people = array(
  
  
  
-      "10",
- 
-   
+      "10",   
       "13" 
 
 
@@ -36,8 +34,6 @@ $people = array(
 $replace ="" ; 
 
 for($i = 0 ; $i < strlen($_this_value) ; $i++) {
-      echo $_this_value[$i] ;
-
       $caractere=substr($_this_value,$i,1);
      
 
@@ -45,20 +41,16 @@ for($i = 0 ; $i < strlen($_this_value) ; $i++) {
 
                   if (in_array(ord($caractere), $people))
                               {
-                                    /*
-                                    if(ord($caractere)>0 && ord($caractere)<256 ){
-                                          //  $_this_value2 = $_this_value2.$_this_value[$i] ;
-                                           $_this_value2 = $_this_value2."'".ord($caractere)."'<br/>" ;
-                                         
-                                      }
-                                      */
-
 
                               }
                               else
                               {
 
-                                    $_this_value2 = $_this_value2.$_this_value[$i] ;
+                                    $_this_value2 = htmlspecialchars($_this_value2.$_this_value[$i]) ;
+
+
+
+                                 
 
                               }
 

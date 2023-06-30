@@ -59,7 +59,7 @@ for(var i = 0 ; i < window.location.href.length ; i ++){
 }
 
   //document.getElementById("id_div_global_style1").innerHTML="" ; 
-  document.getElementById("header_2_add_blogs").className="display_none" ;
+  //document.getElementById("header_2_add_vlogs").className="display_none" ;
   
   document.getElementById("id_div_global_style2").innerHTML="" ; 
 
@@ -334,7 +334,7 @@ var ok = new Information("class/php/php_add/qr_code/index.php"); // création de
 
 if(nom_localisation=="localhost" || nom_localisation=="127.0.0.1"){
  
-ok.add("qr_code", "http://"+nom_localisation+"/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
+ok.add("qr_code", "http://"+nom_localisation+"/vlog.php/"+this.responseText); // ajout de l'information pour lenvoi 
 
 
 
@@ -344,11 +344,11 @@ else{
  
  
 
-ok.add("qr_code", "https://"+nom_localisation+"/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
+ok.add("qr_code", "https://"+nom_localisation+"/vlog.php/"+this.responseText); // ajout de l'information pour lenvoi 
   
 
 }
-//ok.add("qr_code", "https://luvumbu.com/blog.php/"+this.responseText); // ajout de l'information pour lenvoi 
+//ok.add("qr_code", "https://luvumbu.com/vlog.php/"+this.responseText); // ajout de l'information pour lenvoi 
    
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 

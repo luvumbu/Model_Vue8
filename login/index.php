@@ -95,30 +95,18 @@ toutes les focti
 
 
 <style>
-.input_class_general{
-width:100% ;
-padding:5px;
-
-margin-top:50px;
-margin-bottom:50px;
-border:1px solid rgba(0,0,0,0.1) ; 
-border-bottom : 2px solid black ;
-background-color:rgba(100,140,190,0.7) ;
-
+ 
+.text_area_class_general,.input_class_general{
+  width:90% ; 
+  padding : 15px; 
+  margin-top : 15px; 
+  margin:auto ; 
+  border:1px solid rgba(0,0,0,0) ; 
+  border-bottom:7px solid rgba(255,0,0,0.5) ;
+  border-radius:15px;
+}
 
  
-}
-.text_area_class_general{
-    width:100% ;
-    
- height:150px;
- 
- margin-bottom:100px;
- border:1px solid rgba(0,0,0,0.7) ; 
- border-bottom : 2px solid black ;
- background-color:rgba(100,140,0,0.1) ;
-
-}
 </style>
 <link rel="stylesheet" href="src/css/index.css">
 <div id="el"></div>
