@@ -112,3 +112,25 @@ flex-wrap: wrap;
 
    
 }
+.informationes1_1,.informationes2_1{
+    display: flex;
+    justify-content: space-around;
+    border : 5px solid rgba(0,0,0,0.3) ; 
+    text-align: center;
+    padding: 20px;
+}
+.informationes1_x1{
+    margin-right: 100px;
+}
+
+
+.informationes2_2{
+    display: flex;
+    justify-content: space-around;
+    border : 5px solid rgba(0,0,0,0.3) ; 
+    text-align: center;
+    padding: 20px;
+}
+.informationes2_x1{
+    margin-right: 100px;
+}
