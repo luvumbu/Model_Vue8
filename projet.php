@@ -127,8 +127,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
  
 
-
-
+ 
 echo '<div class="page_t1">';
  
 
@@ -235,6 +234,13 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
  
       }
+
+
+      echo "<br/>"  ; 
+
+      echo '<a href="vlog.php/'.$apple->list_row[$i+4].'">LIEN DE LA PAGE </a>' ;
+
+
 
 
     }

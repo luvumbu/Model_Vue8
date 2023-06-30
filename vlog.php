@@ -98,7 +98,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
    );
 
-   $id_information_user_sha1 =$_SESSION["information_user_id_sha1"] ; 
+ 
    $apple->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_sha1`="'.$url.'" ';
    $apple->execution();
    $myJSON = json_encode($apple->list_row); 
@@ -130,7 +130,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
    );
 
-   $id_information_user_sha1 =$_SESSION["information_user_id_sha1"] ; 
+  
    $apple2->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_parent`="'.$name.'"';
    $apple2->execution();
    $myJSON = json_encode($apple2->list_row); 
@@ -167,6 +167,8 @@ else {
 }
 
  
+
+
 for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 // echo $apple->list_row[$i].'<br/>' ; 
 
