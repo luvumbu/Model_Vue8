@@ -7,6 +7,7 @@ let distriution = [] ;
 let provisoir = "w";
 
 let debut = false ; 
+var bool_add = false ; 
 
 const add_element_array = [];
 const add_element_array_parent = [];
@@ -33,7 +34,13 @@ colors_1_.push(colors_1);
 n_plus = 0  ; 
 
 function add_liste_projet_exe(_this){
-
+ 
+if(bool_add==false){
+  bool_add = true ; 
+}
+else {
+  location.reload() ; 
+}
 
   n_ = 0 ; 
 nom_localisation="";
