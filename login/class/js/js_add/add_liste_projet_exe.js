@@ -59,7 +59,7 @@ for(var i = 0 ; i < window.location.href.length ; i ++){
 }
 
   //document.getElementById("id_div_global_style1").innerHTML="" ; 
-  document.getElementById("header_2_add_vlogs").className="display_none" ;
+ 
   
   document.getElementById("id_div_global_style2").innerHTML="" ; 
 
