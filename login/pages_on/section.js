@@ -12,57 +12,6 @@
         function myGreeting2(){
             document.getElementById("id_div_global_style1").innerHTML="" ; 
             document.getElementById("id_div_global_style2").innerHTML="" ; 
-
-
-
-const info_01 ="Titre ";
-const info_02 ="visibilité";
-const info_03 ="Lien page web";
-
-const info_04 ="Modifier le fichier";
-const info_05 ="Changer l'image";
-const info_06 ="Effacer projet";
-
-
-            var node = document.createElement("div");
-            node.setAttribute("id","informationes1") ;
-            node.setAttribute("class","informationes1_1") ;              
-            document.getElementById("id_div_global_style2").appendChild(node);
-
-
-            var node = document.createElement("div");            
-            node.setAttribute("class","informationes1_x1") ;
-            node.innerHTML=info_01 ;              
-            document.getElementById("informationes1").appendChild(node);
-
-            var node = document.createElement("div");            
-            node.setAttribute("class","informationes1_x2") ;
-            node.innerHTML=info_02;              
-            document.getElementById("informationes1").appendChild(node);
-
-            var node = document.createElement("div");            
-            node.setAttribute("class","informationes1_x3") ;
-            node.innerHTML=info_03 ;              
-            document.getElementById("informationes1").appendChild(node);
-
-            var node = document.createElement("div");            
-            node.setAttribute("class","informationes1_x4") ;
-            node.innerHTML=info_04 ;              
-            document.getElementById("informationes1").appendChild(node);
-
-            var node = document.createElement("div");            
-            node.setAttribute("class","informationes1_x5") ;
-            node.innerHTML=info_05 ;              
-            document.getElementById("informationes1").appendChild(node);
-
-            var node = document.createElement("div");            
-            node.setAttribute("class","informationes1_x6") ;
-            node.innerHTML=info_06 ;              
-            document.getElementById("informationes1").appendChild(node);
-
-
-
-
     
     var node = document.createElement("div");
     node.setAttribute("id","elements"+i) ;  
@@ -73,32 +22,17 @@ const info_06 ="Effacer projet";
     
     if(array_voir_liste_projet[0].liste_projet_description1!=undefined){
     
-
-
-
-
-
-       
         for(var i = 0 ; i<array_voir_liste_projet.length ; i ++){
-
-
-
-            if(array_voir_liste_projet[i].liste_projet_id_parent==""){
-
-            
-
-         
             console.log(array_voir_liste_projet[i].liste_projet_description1) ;
     
     
+    if(array_voir_liste_projet[i].liste_projet_id_parent==""){
+
     
-            
     
     var node = document.createElement("div");
     node.setAttribute("id",array_voir_liste_projet[i].liste_projet_id_sha1) ;  
-    node.setAttribute("class","display_flex2 margin_right_100px form_general") ; 
-    node.setAttribute("style","padding:15px") ;  
-    
+    node.setAttribute("class","display_flex2 margin_right_100px form_general") ;  
     document.getElementById("id_div_global_style2").appendChild(node);
     
     
@@ -127,15 +61,8 @@ const info_06 ="Effacer projet";
     
     //
     document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
-
-
-    
-
-
-
-
-    
     /*
+    
     var node = document.createElement("div");
     var textnode = document.createTextNode(array_voir_liste_projet[i].liste_projet_id_sha1);
     node.setAttribute("class","n_nombre margin_right_100px") ; 
@@ -149,8 +76,8 @@ const info_06 ="Effacer projet";
     node.setAttribute("class","n_nombre margin_right_100px") ; 
     node.appendChild(textnode);
     document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
-    
     */
+    
     var node = document.createElement("img");
      
     if(array_voir_liste_projet[i].liste_projet_visibilite1==""){
@@ -237,56 +164,18 @@ const info_06 ="Effacer projet";
     
     
     
-}
+     
      
      
     
     
         }
      
-    
+    }
     
      
     }
     
-
-
-
-    var node = document.createElement("div");
-    node.setAttribute("id","informationes2") ;
-    node.setAttribute("class","informationes2_1") ;              
-    document.getElementById("id_div_global_style2").appendChild(node);
-
-
-    var node = document.createElement("div");            
-    node.setAttribute("class","informationes2_x1") ;
-    node.innerHTML=info_01 ;              
-    document.getElementById("informationes2").appendChild(node);
-
-    var node = document.createElement("div");            
-    node.setAttribute("class","informationes2_x2") ;
-    node.innerHTML=info_02 ;              
-    document.getElementById("informationes2").appendChild(node);
-
-    var node = document.createElement("div");            
-    node.setAttribute("class","informationes2_x3") ;
-    node.innerHTML=info_03 ;              
-    document.getElementById("informationes2").appendChild(node);
-
-    var node = document.createElement("div");            
-    node.setAttribute("class","informationes2_x4") ;
-    node.innerHTML=info_04 ;              
-    document.getElementById("informationes2").appendChild(node);
-
-    var node = document.createElement("div");            
-    node.setAttribute("class","informationes2_x5") ;
-    node.innerHTML=info_05 ;              
-    document.getElementById("informationes2").appendChild(node);
-
-    var node = document.createElement("div");            
-    node.setAttribute("class","informationes2_x6") ;
-    node.innerHTML=info_06 ;              
-    document.getElementById("informationes").appendChild(node);
     
     }
      
@@ -294,4 +183,5 @@ const info_06 ="Effacer projet";
     
     
     }
+    
     

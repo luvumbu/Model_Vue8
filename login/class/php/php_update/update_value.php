@@ -17,42 +17,37 @@ $longueur=strlen($_this_value);
  
 $people = array(
  
+      "195",
+      "194",
+      
  
- 
- 
- 
-      "10",   
-      "13" 
-
+      "128",
+      "153",
+      "160",
+      "168",
+      "169",
+      "170",
+      "171",
+      "174",
+      "180",
+      "185",
+      "226"
 
 );
-
-
 
 
 
 $replace ="" ; 
 
 for($i = 0 ; $i < strlen($_this_value) ; $i++) {
+      echo $_this_value[$i] ;
+
       $caractere=substr($_this_value,$i,1);
      
 
-
-
-                  if (in_array(ord($caractere), $people))
-                              {
-
-                              }
-                              else
-                              {
-
-                                    $_this_value2 = htmlspecialchars($_this_value2.$_this_value[$i]) ;
-
-
-
-                                 
-
-                              }
+                  if(ord($caractere)>30 && ord($caractere)<256 ){
+                        $_this_value2 = $_this_value2.$_this_value[$i] ;
+                     }
 
 
      
