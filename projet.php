@@ -57,7 +57,7 @@ include("model/class/php/Select_datas.php") ;
 
    );
 
-   $id_information_user_sha1 =$_SESSION["information_user_id_sha1"] ; 
+ 
    $apple2->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_parent`=""';
    $apple2->execution();
    $myJSON = json_encode($apple2->list_row); 
@@ -197,12 +197,12 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
 ?>
 
 
- <h1 class="voir_projet">
+ <h4 class="voir_projet">
    
-  <a href="projet.php">Voir tous les projet</a>
+  <a href="index.php">Page d'acceuil</a>
 
 
- </h1>
+ </h4>
 
 
 

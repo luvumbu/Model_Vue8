@@ -17,23 +17,19 @@ $longueur=strlen($_this_value);
  
 $people = array(
  
-      "195",
-      "194",
-      
  
-      "128",
-      "153",
-      "160",
-      "168",
-      "169",
-      "170",
-      "171",
-      "174",
-      "180",
-      "185",
-      "226"
+ 
+ 
+ 
+      "10",
+ 
+   
+      "13" 
+
 
 );
+
+
 
 
 
@@ -45,9 +41,26 @@ for($i = 0 ; $i < strlen($_this_value) ; $i++) {
       $caractere=substr($_this_value,$i,1);
      
 
-                  if(ord($caractere)>30 && ord($caractere)<256 ){
-                        $_this_value2 = $_this_value2.$_this_value[$i] ;
-                     }
+
+
+                  if (in_array(ord($caractere), $people))
+                              {
+                                    /*
+                                    if(ord($caractere)>0 && ord($caractere)<256 ){
+                                          //  $_this_value2 = $_this_value2.$_this_value[$i] ;
+                                           $_this_value2 = $_this_value2."'".ord($caractere)."'<br/>" ;
+                                         
+                                      }
+                                      */
+
+
+                              }
+                              else
+                              {
+
+                                    $_this_value2 = $_this_value2.$_this_value[$i] ;
+
+                              }
 
 
      

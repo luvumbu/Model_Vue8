@@ -183,6 +183,10 @@ node.setAttribute("style","border:1px solid rgba(0,0,0,0);height:100%") ;
 document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
 
 
+
+/*
+
+// NOm du parent ou de lenfant 
 var node = document.createElement("div");
 var textnode = document.createTextNode(array_voir_liste_projet[i].liste_projet_id_sha1);
 node.setAttribute("class","n_nombre margin_right_100px") ; 
@@ -196,7 +200,7 @@ var textnode = document.createTextNode(array_voir_liste_projet[i].liste_projet_i
 node.setAttribute("class","n_nombre margin_right_100px") ; 
 node.appendChild(textnode);
 document.getElementById(array_voir_liste_projet[i].liste_projet_id_sha1).appendChild(node);
-
+*/
 
 var node = document.createElement("img");
  
