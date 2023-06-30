@@ -130,7 +130,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
  
 echo '<div class="page_t1">';
  
-
+/*
 
 if($_SERVER['SERVER_NAME']=="localhost"){
   echo '<img src="http://localhost/Model_Vue8/login/src/img/all/qr_code/'.$name.'.png" alt="" srcset="">' ; 
@@ -146,6 +146,7 @@ else {
 
 
 }
+*/
 
  
 for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
