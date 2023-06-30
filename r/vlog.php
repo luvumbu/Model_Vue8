@@ -7,10 +7,12 @@ header("Access-Control-Allow-Origin: *");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+  <title>Document</title>
+</head>
+<body>
 <?php 
 
+ 
 
  
  
@@ -25,7 +27,7 @@ header("Access-Control-Allow-Origin: *");
 
  for($i = 0 ; $i<strlen($_SERVER['PHP_SELF']) ; $i ++){
 
-
+ 
   if(strrev($_SERVER['PHP_SELF'])[$i]=="/") {
     break ;
   }
@@ -70,9 +72,6 @@ $name="";
 
  $name = $name.$eman[$i] ;
 
-
-
-
 }
 
 
@@ -98,7 +97,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
    );
 
- 
+   $id_information_user_sha1 =$_SESSION["information_user_id_sha1"] ; 
    $apple->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_sha1`="'.$url.'" ';
    $apple->execution();
    $myJSON = json_encode($apple->list_row); 
@@ -130,7 +129,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
    );
 
-  
+   $id_information_user_sha1 =$_SESSION["information_user_id_sha1"] ; 
    $apple2->sql='SELECT * FROM `liste_projet` WHERE `liste_projet_id_parent`="'.$name.'"';
    $apple2->execution();
    $myJSON = json_encode($apple2->list_row); 
@@ -148,26 +147,6 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
 
 echo '<div class="page_t1">';
- 
-
-
-if($_SERVER['SERVER_NAME']=="localhost"){
-  echo '<img src="http://localhost/Model_Vue8/login/src/img/all/qr_code/'.$name.'.png" alt="" srcset="">' ; 
-
-}
-else {
-
-
-  echo '<div>';
-  echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/qr_code/'.$name.'.png">' ; 
-  echo '</div>';
-  
-
-
-}
-
- 
-
 
 for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 // echo $apple->list_row[$i].'<br/>' ; 
@@ -182,27 +161,8 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
     
  
  if($apple->list_row[$i+4]==""){
-?>
-
-<title>
-  <?php echo $apple->list_row[$i] ; ?>
-</title>
-</head>
-<body>
-
-<?php 
 
    echo '<h1>'.$apple->list_row[$i].'</h1>' ; 
-
-
- 
-
-
-
-
-
-
-
  }
 
      
@@ -215,24 +175,6 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
       if($apple->list_row[$i]==""){
         echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" srcset="">' ; 
  
- 
- 
- 
-
-
-   
-
-        if($_SERVER['SERVER_NAME']=="localhost"){
-          echo '<div>';
-          echo '<img src="http://localhost/Model_Vue8/login/src/img/all/qr_code/'.$apple->list_row[$i+4].'.png" alt="" srcset="">' ; 
-
-          echo '</div>';
-       
-        }
- 
- 
-        
-
       }
       else {
 
@@ -361,8 +303,6 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
         echo "<div><a href='".$apple2->list_row[$i+4]."'>Voir article</a>
 
         </div>" ; 
-        
-
        
         if($apple2->list_row[$i]==""){
           echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" srcset="">' ; 
@@ -424,13 +364,7 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
           
   
           if($apple2->list_row[$i+1]==""){
-         
-                echo '<h3>'. $apple2->list_row[$i-1].'</h3>' ;
-
               echo '<h3>'. $apple2->list_row[$i].'</h3>' ; 
-
-              
-
           }
           
         
@@ -448,11 +382,6 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
   
   
   }
-
-  
-
-
- 
   
   echo '</div>';
 
