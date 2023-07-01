@@ -132,7 +132,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 echo '<div class="page_t1">';
 
 
-echo "DEPART" ; 
+ 
  
 /*
 
@@ -208,7 +208,7 @@ if($apple->list_row[$i+6]==""){
    case 1:
 
     if($apple->list_row[$i+5]==""){
-      echo '<h1>'.$apple->list_row[$i].'</h1>' ; 
+     
    
 
     if($apple->list_row[$i+3]==""){
