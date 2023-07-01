@@ -181,24 +181,9 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
 <?php 
 
-
-
- 
-
-  
 if($apple->list_row[$i+6]==""){
    echo '<h1>'.$apple->list_row[$i].'</h1>' ; 
 }
- 
-
-
- 
-
-
-
-
-
-
 
  }
 
@@ -214,20 +199,24 @@ if($apple->list_row[$i+6]==""){
     if($apple->list_row[$i+3]==""){
      
       if($apple->list_row[$i]==""){
+        echo '<a href="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600">' ;
         echo '<img src="https://images.pexels.com/photos/3705944/pexels-photo-3705944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" srcset="">' ; 
+        echo '</a>' ; 
  
  
- 
- 
+  
 
 
    
 
         if($_SERVER['SERVER_NAME']=="localhost"){
+          
           echo '<div>';
-          echo '<img src="http://localhost/Model_Vue8/login/src/img/all/qr_code/'.$apple->list_row[$i+4].'.png" alt="" srcset="">' ; 
-
+          echo '<a href="http://localhost/Model_Vue8/login/src/img/all/qr_code/'.$apple->list_row[$i+4].'.png">';
+          echo ' <img src="http://localhost/Model_Vue8/login/src/img/all/qr_code/'.$apple->list_row[$i+4].'.png" alt="" srcset="">' ; 
+          echo '</a>';
           echo '</div>';
+
        
         }
  
@@ -240,14 +229,16 @@ if($apple->list_row[$i+6]==""){
 
 
         if($_SERVER['SERVER_NAME']=="localhost"){
+          echo '<a href="http://localhost/Model_Vue8/login/src/img/all/'.$apple->list_row[$i].'">';
           echo '<img src="http://localhost/Model_Vue8/login/src/img/all/'.$apple->list_row[$i].'" alt="" srcset="">' ; 
-
+          echo '</a>';
         }
         else {
   
-
+          echo '<a href="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/'.$apple->list_row[$i].'">';
           echo '<div>';
           echo '<img src="https://'.$_SERVER['SERVER_NAME'].'/login/src/img/all/'.$apple->list_row[$i].'">' ; 
+         echo '</a>';
           echo '</div>';
           
  
