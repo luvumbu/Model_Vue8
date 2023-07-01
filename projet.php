@@ -93,7 +93,8 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
    'liste_projet_description2', 
    'liste_projet_reg_date',
    'liste_projet_visibilite1',
-   'liste_projet_id_sha1' 
+   'liste_projet_id_sha1',
+   'liste_projet_id_parent' 
    
 
    );
@@ -129,6 +130,9 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
  
 echo '<div class="page_t1">';
+
+
+echo "DEPART" ; 
  
 /*
 
@@ -148,14 +152,19 @@ else {
 }
 */
 
+
  
 for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
+
+
+ 
+ 
 // echo $apple->list_row[$i].'<br/>' ; 
 
 // echo(fmod($i, count($apple->row)) . "<br>");
 
  
-
+ 
  switch (fmod($i, count($apple->row))) {
    case 0:
   
@@ -172,7 +181,15 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
 <?php 
 
+
+
+ 
+
+  
+if($apple->list_row[$i+6]==""){
    echo '<h1>'.$apple->list_row[$i].'</h1>' ; 
+}
+ 
 
 
  
@@ -189,6 +206,10 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
      break;
    case 1:
+
+    if($apple->list_row[$i+5]==""){
+      echo '<h1>'.$apple->list_row[$i].'</h1>' ; 
+   
 
     if($apple->list_row[$i+3]==""){
      
@@ -246,11 +267,13 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
     }
      
-
+  }
      break;
 
      case 2:
-  
+
+      
+      if($apple->list_row[$i+4]==""){
     if($apple->list_row[$i+2]==""){
 
       echo '<h3>'.$apple->list_row[$i].'</h3>' ; 
@@ -259,10 +282,10 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
  
       
        break;
-
+      }
 
        case 3:
- 
+        if($apple->list_row[$i+3]==""){
  
         if($_SERVER['SERVER_NAME']=="localhost"){
           if($apple->list_row[$i+2]==""){
@@ -293,8 +316,8 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
         echo '<h4>'.$apple->list_row[$i].'</h4>' ; 
 
         }
-
-      
+     
+        }
           
            break;
            
