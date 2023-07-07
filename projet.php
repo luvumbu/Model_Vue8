@@ -8,6 +8,8 @@ header("Access-Control-Allow-Origin: *");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="projet.css">
+
 
 <?php 
 
@@ -129,7 +131,7 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
  
 
  
-echo '<div class="page_t1">';
+
 
 
  
@@ -152,7 +154,7 @@ else {
 }
 */
 
-
+$title_ = false ; 
  
 for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
 
@@ -171,15 +173,41 @@ for($i = 0 ; $i <count($apple->list_row) ; $i ++ ){
     
  
  if($apple->list_row[$i+4]==""){
-?>
 
+  if($title_==false){
+
+
+$variable_http = "https://luvumbu.com/login/src/img/all/";
+
+ 
+
+
+
+  $favicon = $variable_http.$apple->list_row[$i+1]   ; 
+ 
+?>
+ 
 <title>
   <?php echo $apple->list_row[$i] ; ?>
 </title>
+
+<link rel="icon" type="image/x-icon" href="<?php echo  $favicon ?>">
 </head>
-<body>
+
 
 <?php 
+
+
+  
+echo '<body>';
+
+
+
+echo '<div class="page_t1">';
+$title_ = true ; 
+ }
+
+
 
 if($apple->list_row[$i+6]==""){
    echo '<h1>'.$apple->list_row[$i].'</h1>' ; 
@@ -341,48 +369,7 @@ echo '</div>';
 
 
 
-<style>
-  .voir_projet{
-    text-align:center ; 
-    margin-top:50px; 
-    margin-bottom : 50px; 
-  }
- .page_t1{
-   text-align:center ; 
-   max-width: 60%;
-   margin:auto ; 
- }
- .page_t1 img{
-  margin-top:50px ; 
-  max-width:60%;
- }
-  .page_t1 h1{
-padding-top:50px;
- }
- .page_t1 h3{
-color:rgba(0,0,0,0.3) ; 
-margin-top:80px; 
-text-align: justify;
-font-size:1.2em; 
- }
-
- .page_t1 h4{
-color:rgba(0,0,0,0.1) ;  
-
- }
-
- @media screen and (max-width: 1200px) {
-   .page_t1{
-   text-align:center ; 
-   max-width: 90%;
-   margin:auto ; 
- }
- .page_t1 img{
-  margin-top:50px ; 
-  max-width:90%;
- }
-}
-</style>
+ 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </body>
 </html>
