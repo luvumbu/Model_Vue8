@@ -462,11 +462,21 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
 
  <h1 class="voir_projet">
    
-  <a href="../projet.php">Source article</a>
+  <a href="../projet.php" >Tous les articles</a>
 
+ <br/>
+ <br/> <br/> <br/>  
 
-  <a href="<?php echo $apple->list_row[6]  ?>">Article comlet</a>
+<?php
 
+if($apple->list_row[6] !=""){
+?>
+
+<a href="<?php echo $apple->list_row[6]  ?>">Source article </a>
+<?php 
+}
+
+?>
 
  </h1>
 
