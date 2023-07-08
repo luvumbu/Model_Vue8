@@ -93,7 +93,8 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
    'liste_projet_description2', 
    'liste_projet_reg_date',
    'liste_projet_visibilite1',
-   'liste_projet_id_sha1' 
+   'liste_projet_id_sha1',
+   'liste_projet_id_parent' 
    
 
    );
@@ -461,7 +462,10 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
 
  <h1 class="voir_projet">
    
-  <a href="../projet.php">Voir tous les projet</a>
+  <a href="../projet.php">Source article</a>
+
+
+  <a href="<?php echo $apple->list_row[6]  ?>">Article comlet</a>
 
 
  </h1>
