@@ -12,8 +12,142 @@ header("Access-Control-Allow-Origin: *");
 <?php 
 
 include("model/class/php/Select_datas.php") ;  
+include("model/class/php/Insertion_Bdd.php") ; 
+ 
+$date_array = array() ; 
+$ip_array = array() ; 
+
+
+$liste_visite_page_id_array = array() ; 
+$liste_visite_page_id_sha1_array = array() ; 
+$liste_visite_page_ip_array = array() ; 
+$liste_visite_page_reg_date_1_array = array() ; 
+$liste_visite_page_reg_date_array = array() ; 
+
+
+
+$ip_a = $_SERVER['REMOTE_ADDR'] ; 
+$t = time(date_default_timezone_set('Europe/Paris')) ; 
+$tiempo = date("Y-m-d",$t);
+
+ 
+$apple = new Select_datas($servername,$username,$password,$dbname);
+
+  array_push(
+    $apple->row,
+
+    'liste_visite_page_id',
+    'liste_visite_page_id_sha1',    
+    'liste_visite_page_ip',    
+    'liste_visite_page_reg_date_1',
+    'liste_visite_page_reg_date'
+ 
+
+    );
  
  
+    $apple->sql='SELECT * FROM `liste_visite_page` WHERE 1 ';
+    $apple->execution();
+    $myJSON = json_encode($apple->list_row);     
+
+    // echo   $myJSON ; 
+
+
+
+ if(count($apple->list_row)>0){
+ 
+
+
+
+
+
+  // Ajout de l'adresse ip 
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+  
+
+
+ 
+
+
+
+    
+
+
+       for($i= 0 ; $i<count($apple->list_row) ; $i++){
+     //   echo $i.'<br/>' ; 
+
+
+       //echo(fmod($i, 4) . "<br>");
+
+
+ 
+
+
+       switch (fmod($i, 5)) {
+        case 0:
+              array_push($liste_visite_page_id_array,$apple->list_row[$i]);
+          break;
+
+        case 1:
+                array_push($liste_visite_page_id_sha1_array,$apple->list_row[$i]);
+          break;
+
+        case 2:
+                  array_push($liste_visite_page_ip_array,$apple->list_row[$i]);
+          break;
+        case 3:
+                    array_push($liste_visite_page_reg_date_1_array,$apple->list_row[$i]);
+           break;
+        case 4:
+                      array_push($liste_visite_page_reg_date_array,$apple->list_row[$i]);
+           break;
+ 
+      }
+
+ 
+
+
+
+
+ 
+
+
+       }
+ 
+  
+       
+  
+  
+
+  // fin ajout adresse ip 
+ }
+
+    
+
+
+ 
+
+ 
+
+
+
+
+ 
+ 
+
+ 
+  
  
  
 
@@ -79,6 +213,31 @@ $name="";
 
 
 
+
+
+
+if (!in_array($tiempo, $liste_visite_page_reg_date_1_array) &&  !in_array($ip_a, $liste_visite_page_ip_array) )
+{
+
+
+   $apple = new Insertion_Bdd(
+    $servername,
+    $username,
+    $password,
+    $dbname
+    
+    );
+        
+   
+    $apple->set_msg_valudation("") ;  
+    $apple->set_sql("INSERT INTO liste_visite_page (liste_projet_id_sha1_info,liste_visite_page_id_sha1,liste_visite_page_ip,liste_visite_page_reg_date_1)
+            
+    VALUES ('$name','$t','$ip_a','$tiempo')") ; 
+    $apple->execution() ;
+}
+
+
+
  
 
 
@@ -141,11 +300,43 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
 
 
 
+// COUNT PAGE 
 
+$apple3 = new Select_datas($servername,$username,$password,$dbname);
 
+array_push(
+  $apple3->row,
+
+  'COUNT("'.$name.'")' 
+  
+
+  );
 
  
+  $apple3->sql='SELECT COUNT("'.$name.'") FROM `liste_visite_page` WHERE 1';
+  $apple3->execution();
+  $myJSON = json_encode($apple3->list_row); 
 
+
+
+// FIN COUNT PAGE 
+
+?>
+<div class="display_flex">
+  <div>
+  <img width="30" id="yd_total" height="30" src="https://img.icons8.com/ios/30/visible--v1.png" alt="visible--v1"/>
+  </div>
+  <div>
+  <?php 
+
+echo count($apple3->list_row) ; 
+?>
+  </div>
+</div>
+
+<?php 
+ 
+ 
 
 
 echo '<div class="page_t1">';
@@ -577,100 +768,8 @@ $apple = new Select_datas($servername,$username,$password,$dbname);
  
     $apple->all_data_json() ; 
     */
- ?>
-
-
-<?php 
-
-
-// exemple de code n° 2 
-
- 
  
 
- 
-include("model/class/php/Insertion_Bdd.php") ; 
- 
-
-
-
-
- 
-$apple = new Select_datas($servername,$username,$password,$dbname);
-
-  array_push(
-    $apple->row,
-
-    'liste_visite_page_id_sha1',
-    'liste_visite_page_ip',
-    'liste_visite_page_reg_date',
-    'liste_visite_page_reg_date_1'
- 
-
-    );
- 
- 
-    $apple->sql='SELECT * FROM `liste_visite_page` WHERE 1 ';
-    $apple->execution();
-    $myJSON = json_encode($apple->list_row);     
-
-    // echo   $myJSON ; 
-
-
-
- if(count($apple->list_row)>0){
-  echo "<br/>" ;
-  echo "..." ; 
- echo count($apple->list_row) ; 
-  echo "<br/>" ;
- }
-    
- ?>
-
- 
-
-
-
-
-
-
-
-
-
-
-
-<?php 
- $ip_a = $_SERVER['REMOTE_ADDR'] ; 
-
-
- date_default_timezone_set('Europe/Paris');
- 
-header("Access-Control-Allow-Origin: *");
-
- 
-      $t = time(date_default_timezone_set('Europe/Paris')) ; 
-      $tiempo = date("Y-m-d",$t);
-
-
- 
-     $information_user_info = $_SESSION["information_user_id_sha1"] ; 
- 
-      
-      $apple = new Insertion_Bdd(
-        $servername,
-        $username,
-        $password,
-        $dbname
-        
-        );
-            
-       
-        $apple->set_msg_valudation("inserttion ok ") ;  
-        $apple->set_sql("INSERT INTO liste_visite_page (liste_visite_page_id_sha1,liste_visite_page_ip)
-                
-        VALUES ('$t','$tiempo')") ; 
-        $apple->execution() ;
-echo "EXECUTION" ; 
 
 
  
@@ -680,3 +779,29 @@ echo "EXECUTION" ;
         
 ?>
  
+
+ <style>
+  .display_flex{
+    display:flex ; 
+    justify-content:space-around ; 
+    padding:20px; 
+  }
+ </style>
+
+
+<script>
+
+
+const src__1 ="https://img.icons8.com/ios/30/visible--v1.png" ; 
+const src__2 ="https://img.icons8.com/ios/30/visible--v1.png" ; 
+
+
+ 
+  
+  
+ 
+ 
+
+
+ 
+</script>
