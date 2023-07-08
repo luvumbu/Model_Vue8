@@ -83,6 +83,27 @@ $execution_formulaire_php->set_action ("CREATE TABLE liste_projet (
   )");
 
 
+$execution_formulaire_php->set_action ("CREATE TABLE liste_visite_page (
+
+  liste_visite_page_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  liste_visite_page_id_sha1 VARCHAR(200) NOT NULL,
+  liste_visite_page_ip VARCHAR(200) NOT NULL,
+  liste_visite_page_reg_date_1 VARCHAR(200) NOT NULL,
+
+
+  liste_visite_page_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+$execution_formulaire_php->set_action ("CREATE TABLE liste_visite_admin_page (
+
+  liste_visite_admin_page_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  liste_visite_admin_page_id_sha1 VARCHAR(200) NOT NULL,
+  liste_visite_admin_page_ip VARCHAR(200) NOT NULL,
+
+  liste_visite_admin_page_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )");
+
+
 
 
 $execution_formulaire_php->set_action ("CREATE TABLE liste_projet_remove_log (

@@ -11,7 +11,7 @@ header("Access-Control-Allow-Origin: *");
 
 <?php 
 
-
+include("model/class/php/Select_datas.php") ;  
  
  
  
@@ -45,7 +45,7 @@ header("Access-Control-Allow-Origin: *");
 
  
   
-include("model/class/php/Select_datas.php") ;  
+
 
 $eman="";
 $name="";
@@ -527,3 +527,156 @@ color:rgba(0,0,0,0.1) ;
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </body>
 </html>
+
+
+
+
+
+
+
+
+<?php 
+// CODE exeMPLe 
+/*
+ session_start() ; 
+ header("Access-Control-Allow-Origin: *");
+
+include("link.php") ;  
+
+
+$apple = new Select_datas($servername,$username,$password,$dbname);
+
+  array_push(
+    $apple->row,
+
+    'liste_projet_id',
+    'liste_projet_id_sha1',
+    'liste_projet_id_parent',
+    'liste_projet_id_sha1_general',
+    'liste_projet_ip',
+    'liste_projet_img',
+    'liste_projet_name',
+    'liste_projet_description1',
+    'liste_projet_description2',
+    'liste_projet_visibilite1',
+    'liste_projet_visibilite2',
+    'liste_projet_type',
+    'information_user_id_sha1',
+    'liste_projet_new_file',
+    'liste_projet_reg_date'
+    
+
+    );
+ 
+    $id_information_user_sha1 =$_SESSION["information_user_id_sha1"] ; 
+    $apple->sql='SELECT * FROM `liste_projet` WHERE `information_user_id_sha1`="'.$id_information_user_sha1.'"ORDER BY `liste_projet_id` ';
+    $apple->execution();
+    $myJSON = json_encode($apple->list_row); 
+
+    // echo   $myJSON ; 
+ 
+    $apple->all_data_json() ; 
+    */
+ ?>
+
+
+<?php 
+
+
+// exemple de code n° 2 
+
+ 
+ 
+
+ 
+include("model/class/php/Insertion_Bdd.php") ; 
+ 
+
+
+
+
+ 
+$apple = new Select_datas($servername,$username,$password,$dbname);
+
+  array_push(
+    $apple->row,
+
+    'liste_visite_page_id_sha1',
+    'liste_visite_page_ip',
+    'liste_visite_page_reg_date',
+    'liste_visite_page_reg_date_1'
+ 
+
+    );
+ 
+ 
+    $apple->sql='SELECT * FROM `liste_visite_page` WHERE 1 ';
+    $apple->execution();
+    $myJSON = json_encode($apple->list_row);     
+
+    // echo   $myJSON ; 
+
+
+
+ if(count($apple->list_row)>0){
+  echo "<br/>" ;
+  echo "..." ; 
+ echo count($apple->list_row) ; 
+  echo "<br/>" ;
+ }
+    
+ ?>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<?php 
+ $ip_a = $_SERVER['REMOTE_ADDR'] ; 
+
+
+ date_default_timezone_set('Europe/Paris');
+ 
+header("Access-Control-Allow-Origin: *");
+
+ 
+      $t = time(date_default_timezone_set('Europe/Paris')) ; 
+      $tiempo = date("Y-m-d",$t);
+
+
+ 
+     $information_user_info = $_SESSION["information_user_id_sha1"] ; 
+ 
+      
+      $apple = new Insertion_Bdd(
+        $servername,
+        $username,
+        $password,
+        $dbname
+        
+        );
+            
+       
+        $apple->set_msg_valudation("inserttion ok ") ;  
+        $apple->set_sql("INSERT INTO liste_visite_page (liste_visite_page_id_sha1,liste_visite_page_ip)
+                
+        VALUES ('$t','$tiempo')") ; 
+        $apple->execution() ;
+echo "EXECUTION" ; 
+
+
+ 
+
+
+        
+        
+?>
+ 
