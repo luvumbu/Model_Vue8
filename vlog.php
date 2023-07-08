@@ -524,6 +524,10 @@ echo '</div>';
 
 echo '<div class="page_t1">';
  
+ 
+if($apple->list_row[4]!="i")
+{
+
 
 
 for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
@@ -645,7 +649,7 @@ for($i = 0 ; $i <count($apple2->list_row) ; $i ++ ){
 
 
  
-  
+}
   echo '</div>';
 
 ?>
