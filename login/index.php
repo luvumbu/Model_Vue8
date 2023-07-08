@@ -89,37 +89,12 @@ toutes les focti
 <script src="class/js/js_on/option_redirection.js"></script>  
 <script src="class/js/js_array_info/voir_liste_projet.js"></script>  
 <script src="class/js/js_array_info/link.js"></script>  
+<script src="class/js/js_upload/update_liste_projet_visibilite1.js"></script>  
 
 
-
-
-
-<style>
-.input_class_general{
-width:100% ;
-padding:5px;
-
-margin-top:50px;
-margin-bottom:50px;
-border:1px solid rgba(0,0,0,0.1) ; 
-border-bottom : 2px solid black ;
-background-color:rgba(100,140,190,0.7) ;
 
 
  
-}
-.text_area_class_general{
-    width:100% ;
-    
- height:150px;
- 
- margin-bottom:100px;
- border:1px solid rgba(0,0,0,0.7) ; 
- border-bottom : 2px solid black ;
- background-color:rgba(100,140,0,0.1) ;
-
-}
-</style>
 <link rel="stylesheet" href="src/css/index.css">
 <div id="el"></div>
 <?php 
