@@ -216,8 +216,7 @@ $name="";
 
 
 
-if (!in_array($tiempo, $liste_visite_page_reg_date_1_array) &&  !in_array($ip_a, $liste_visite_page_ip_array) )
-{
+ 
 
 
    $apple = new Insertion_Bdd(
@@ -234,7 +233,7 @@ if (!in_array($tiempo, $liste_visite_page_reg_date_1_array) &&  !in_array($ip_a,
             
     VALUES ('$name','$t','$ip_a','$tiempo')") ; 
     $apple->execution() ;
-}
+ 
 
 
 
@@ -328,8 +327,8 @@ array_push(
   </div>
   <div>
   <?php 
-
-echo count($apple3->list_row) ; 
+ 
+echo $apple3->list_row[0] ; 
 ?>
   </div>
 </div>
