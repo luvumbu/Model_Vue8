@@ -32,7 +32,7 @@ session_start();
    ?>
 
 <script>
-    document.title =change_title() ;
+  document.title =change_title() ;
   document.getElementById("titre_page1").innerHTML=change_title();
   document.getElementById("titre_page2").innerHTML=change_title();
   
@@ -43,28 +43,19 @@ session_start();
    <?php
   }
   else {
+    include("link_page/link_on.html") ; 
+    include("pages_on/login.php") ;
+   //include("index_imgs.php");
 
-   include("pages_on/login.php") ;
-
-
+//   Ajax("header_action","header/header_action/header_action_1.html");
 
    ?>
-
-   <script>
-       document.title =change_title() ;
-     document.getElementById("titre_page3").innerHTML=change_title();
  
-     
-   
-   
-   </script>
-   
-      <?php
-   ?>
 <script src="class/js/js_on/session_destroy.js"></script>
 <?php 
   }
- include("link_off/index_link.html") ; 
+ include("link_page/link_off.html") ; 
+
    ?>
   <!--
 <script src="class/js/js_off/select_info1.js"></script> 
@@ -101,6 +92,19 @@ toutes les focti
   if(isset($_SESSION["information_user_id"])){
 }
 include("class/php/php_off/verif.php");
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 </div>
 

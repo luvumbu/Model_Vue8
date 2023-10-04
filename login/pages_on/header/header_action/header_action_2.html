@@ -1,0 +1,49 @@
+ 
+
+<div class="container mt-5 text-center">
+  <div class="mb-3">     
+    <input type="email" class="form-control" onkeyup="header_action_2_(this)" id="header_action_2_input" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3"> 
+    <textarea name="" onkeyup="header_action_2_(this)" id="textarea_action_2_input" ></textarea>
+  </div> 
+<div class="change_img" id="change_img" onclick="change_img()"></div>
+  <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+  <div class="dislay_flex">
+    <!--<img id="visible_2_parent_1696121731807" onclick="visible_2_parent_(this)" class="cursor_pointer space_right_20" width="50" height="50" src="https://img.icons8.com/badges/50/visible.png" alt="visible">
+    -->
+    <img id="visible_2_parent_1696121731807" onclick="visible_2_parent_(this)" class="cursor_pointer space_right_20" width="50" height="50" src="https://img.icons8.com/badges/50/invisible.png" alt="visible">
+    <img id="www_parent_1696121731807" onclick="www_parent_(this)" class="cursor_pointer space_right_20" width="50" height="50" src="https://img.icons8.com/ios/50/internet--v1.png" alt="internet--v1">
+    <img id="remove_element_parent_1696121731807" onclick="remove_element_parent_(this)" class="cursor_pointer space_right_20" width="50" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1">
+    <img width="50" height="50" src="https://img.icons8.com/office/50/plus--v1.png" alt="plus--v1"/>
+  </div>
+</div>
+
+<div id="header_action_2_info"></div>
+
+
+ 
+
+<style>
+  textarea{
+    width: 100%;
+    height : 100% ; 
+    border:1px solid rgba(0,0,0,0.3) ; 
+  }
+  .change_img{
+    width : 100px; 
+    height : 100px ; 
+    margin-bottom : 25px ; 
+ 
+  background-image: url("https://img.icons8.com/sf-regular/100/picture.png");
+background-size:100% ; 
+}
+.change_img:hover{
+  cursor:pointer ; 
+}
+.dislay_flex{
+  display: flex;
+  justify-content: space-around;
+  margin-top:45px ; 
+}
+</style>
