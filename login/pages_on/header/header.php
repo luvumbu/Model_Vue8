@@ -90,6 +90,11 @@ function header_2_action() {
   console.log(this.id) ; 
   console.log(this.className) ; 
 
+  Ajax("header_action","pages_on/header/header_action/session_destroy.php");
+
+
+  location.reload() ; 
+
 }
 function header_3_action() {
   console.log(this.id) ; 
